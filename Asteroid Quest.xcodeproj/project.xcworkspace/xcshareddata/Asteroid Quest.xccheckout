@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>55922379-1F95-4199-9ED0-525435B7EEF1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Asteroid Quest</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>80AF20C9AFAC36994C77D091F6D507D64101142B</key>
+		<string>https://github.com/broma186/SpaceFlight.git</string>
+		<key>CCB982F7BDEC49DB2531A9479F4B5DE0912F0F0B</key>
+		<string>https://github.com/broma186/SpaceMission-iOS.git</string>
+		<key>F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F</key>
+		<string>https://github.com/broma186/Asteroid-Quest.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Asteroid Quest.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>80AF20C9AFAC36994C77D091F6D507D64101142B</key>
+		<string>../../../SpaceFlight</string>
+		<key>CCB982F7BDEC49DB2531A9479F4B5DE0912F0F0B</key>
+		<string>../../../SpaceMission</string>
+		<key>F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/broma186/Asteroid-Quest.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Asteroid%20Quest</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>80AF20C9AFAC36994C77D091F6D507D64101142B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SpaceFlight</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CCB982F7BDEC49DB2531A9479F4B5DE0912F0F0B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SpaceMission</string>
+		</dict>
+	</array>
+</dict>
+</plist>

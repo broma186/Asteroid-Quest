@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C93C33001B673A7900A13973 /* Intelligence.m in Sources */ = {isa = PBXBuildFile; fileRef = C93C32FF1B673A7900A13973 /* Intelligence.m */; };
+		C93C33021B673D3C00A13973 /* Intel.m in Sources */ = {isa = PBXBuildFile; fileRef = C93C33011B673D3C00A13973 /* Intel.m */; };
 		C972FC291B672E5E00871057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC281B672E5E00871057 /* main.m */; };
 		C972FC2C1B672E5E00871057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2B1B672E5E00871057 /* AppDelegate.m */; };
 		C972FC2F1B672E5E00871057 /* SpaceScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2E1B672E5E00871057 /* SpaceScene.m */; };
@@ -72,8 +72,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C93C32FE1B673A7900A13973 /* Intelligence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Intelligence.h; path = ../../SpaceMission/Intelligence.h; sourceTree = "<group>"; };
-		C93C32FF1B673A7900A13973 /* Intelligence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Intelligence.m; path = ../../SpaceMission/Intelligence.m; sourceTree = "<group>"; };
+		C93C33011B673D3C00A13973 /* Intel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intel.m; sourceTree = "<group>"; };
+		C93C33031B673D5000A13973 /* Intel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Intel.h; sourceTree = "<group>"; };
 		C972FC231B672E5E00871057 /* Asteroid Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asteroid Quest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C972FC271B672E5E00871057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C972FC281B672E5E00871057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -189,10 +189,10 @@
 		C972FC251B672E5E00871057 /* Asteroid Quest */ = {
 			isa = PBXGroup;
 			children = (
-				C93C32FE1B673A7900A13973 /* Intelligence.h */,
-				C93C32FF1B673A7900A13973 /* Intelligence.m */,
 				C975AD861B67306800219585 /* Score.h */,
 				C975AD871B67306800219585 /* Score.m */,
+				C93C33031B673D5000A13973 /* Intel.h */,
+				C93C33011B673D3C00A13973 /* Intel.m */,
 				C975AD881B67306800219585 /* Asteroid.h */,
 				C975AD891B67306800219585 /* Asteroid.m */,
 				C975AD8A1B67306800219585 /* Explosion.h */,
@@ -450,9 +450,9 @@
 				C975AD851B67305600219585 /* ParallaxScrolling.m in Sources */,
 				C975AD841B67305600219585 /* Math.m in Sources */,
 				C972FC341B672E5E00871057 /* GameViewController.m in Sources */,
-				C93C33001B673A7900A13973 /* Intelligence.m in Sources */,
 				C975AD8E1B67306800219585 /* Explosion.m in Sources */,
 				C972FC2C1B672E5E00871057 /* AppDelegate.m in Sources */,
+				C93C33021B673D3C00A13973 /* Intel.m in Sources */,
 				C975AD8C1B67306800219585 /* Score.m in Sources */,
 				C972FC2F1B672E5E00871057 /* SpaceScene.m in Sources */,
 				C972FC291B672E5E00871057 /* main.m in Sources */,
