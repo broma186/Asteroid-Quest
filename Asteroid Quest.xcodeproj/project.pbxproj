@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C972FC291B672E5E00871057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC281B672E5E00871057 /* main.m */; };
+		C972FC2C1B672E5E00871057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2B1B672E5E00871057 /* AppDelegate.m */; };
+		C972FC2F1B672E5E00871057 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2E1B672E5E00871057 /* GameScene.m */; };
+		C972FC311B672E5E00871057 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C972FC301B672E5E00871057 /* GameScene.sks */; };
+		C972FC341B672E5E00871057 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC331B672E5E00871057 /* GameViewController.m */; };
+		C972FC371B672E5E00871057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C972FC351B672E5E00871057 /* Main.storyboard */; };
+		C972FC391B672E5E00871057 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C972FC381B672E5E00871057 /* Images.xcassets */; };
+		C972FC3C1B672E5E00871057 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C972FC3A1B672E5E00871057 /* LaunchScreen.xib */; };
+		C972FC481B672E5E00871057 /* Asteroid_QuestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC471B672E5E00871057 /* Asteroid_QuestTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C972FC421B672E5E00871057 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C972FC1B1B672E5E00871057 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C972FC221B672E5E00871057;
+			remoteInfo = "Asteroid Quest";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C972FC231B672E5E00871057 /* Asteroid Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asteroid Quest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C972FC271B672E5E00871057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C972FC281B672E5E00871057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C972FC2A1B672E5E00871057 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C972FC2B1B672E5E00871057 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C972FC2D1B672E5E00871057 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		C972FC2E1B672E5E00871057 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		C972FC301B672E5E00871057 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		C972FC321B672E5E00871057 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		C972FC331B672E5E00871057 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		C972FC361B672E5E00871057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C972FC381B672E5E00871057 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C972FC3B1B672E5E00871057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C972FC411B672E5E00871057 /* Asteroid QuestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Asteroid QuestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C972FC461B672E5E00871057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C972FC471B672E5E00871057 /* Asteroid_QuestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Asteroid_QuestTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C972FC201B672E5E00871057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C972FC3E1B672E5E00871057 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C972FC1A1B672E5E00871057 = {
+			isa = PBXGroup;
+			children = (
+				C972FC251B672E5E00871057 /* Asteroid Quest */,
+				C972FC441B672E5E00871057 /* Asteroid QuestTests */,
+				C972FC241B672E5E00871057 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C972FC241B672E5E00871057 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C972FC231B672E5E00871057 /* Asteroid Quest.app */,
+				C972FC411B672E5E00871057 /* Asteroid QuestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C972FC251B672E5E00871057 /* Asteroid Quest */ = {
+			isa = PBXGroup;
+			children = (
+				C972FC2A1B672E5E00871057 /* AppDelegate.h */,
+				C972FC2B1B672E5E00871057 /* AppDelegate.m */,
+				C972FC2D1B672E5E00871057 /* GameScene.h */,
+				C972FC2E1B672E5E00871057 /* GameScene.m */,
+				C972FC301B672E5E00871057 /* GameScene.sks */,
+				C972FC321B672E5E00871057 /* GameViewController.h */,
+				C972FC331B672E5E00871057 /* GameViewController.m */,
+				C972FC351B672E5E00871057 /* Main.storyboard */,
+				C972FC381B672E5E00871057 /* Images.xcassets */,
+				C972FC3A1B672E5E00871057 /* LaunchScreen.xib */,
+				C972FC261B672E5E00871057 /* Supporting Files */,
+			);
+			path = "Asteroid Quest";
+			sourceTree = "<group>";
+		};
+		C972FC261B672E5E00871057 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C972FC271B672E5E00871057 /* Info.plist */,
+				C972FC281B672E5E00871057 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C972FC441B672E5E00871057 /* Asteroid QuestTests */ = {
+			isa = PBXGroup;
+			children = (
+				C972FC471B672E5E00871057 /* Asteroid_QuestTests.m */,
+				C972FC451B672E5E00871057 /* Supporting Files */,
+			);
+			path = "Asteroid QuestTests";
+			sourceTree = "<group>";
+		};
+		C972FC451B672E5E00871057 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C972FC461B672E5E00871057 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C972FC221B672E5E00871057 /* Asteroid Quest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C972FC4B1B672E5E00871057 /* Build configuration list for PBXNativeTarget "Asteroid Quest" */;
+			buildPhases = (
+				C972FC1F1B672E5E00871057 /* Sources */,
+				C972FC201B672E5E00871057 /* Frameworks */,
+				C972FC211B672E5E00871057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Asteroid Quest";
+			productName = "Asteroid Quest";
+			productReference = C972FC231B672E5E00871057 /* Asteroid Quest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C972FC401B672E5E00871057 /* Asteroid QuestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C972FC4E1B672E5E00871057 /* Build configuration list for PBXNativeTarget "Asteroid QuestTests" */;
+			buildPhases = (
+				C972FC3D1B672E5E00871057 /* Sources */,
+				C972FC3E1B672E5E00871057 /* Frameworks */,
+				C972FC3F1B672E5E00871057 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C972FC431B672E5E00871057 /* PBXTargetDependency */,
+			);
+			name = "Asteroid QuestTests";
+			productName = "Asteroid QuestTests";
+			productReference = C972FC411B672E5E00871057 /* Asteroid QuestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C972FC1B1B672E5E00871057 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Matthew Brooker";
+				TargetAttributes = {
+					C972FC221B672E5E00871057 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					C972FC401B672E5E00871057 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = C972FC221B672E5E00871057;
+					};
+				};
+			};
+			buildConfigurationList = C972FC1E1B672E5E00871057 /* Build configuration list for PBXProject "Asteroid Quest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C972FC1A1B672E5E00871057;
+			productRefGroup = C972FC241B672E5E00871057 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C972FC221B672E5E00871057 /* Asteroid Quest */,
+				C972FC401B672E5E00871057 /* Asteroid QuestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C972FC211B672E5E00871057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C972FC3C1B672E5E00871057 /* LaunchScreen.xib in Resources */,
+				C972FC391B672E5E00871057 /* Images.xcassets in Resources */,
+				C972FC311B672E5E00871057 /* GameScene.sks in Resources */,
+				C972FC371B672E5E00871057 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C972FC3F1B672E5E00871057 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C972FC1F1B672E5E00871057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C972FC341B672E5E00871057 /* GameViewController.m in Sources */,
+				C972FC2C1B672E5E00871057 /* AppDelegate.m in Sources */,
+				C972FC2F1B672E5E00871057 /* GameScene.m in Sources */,
+				C972FC291B672E5E00871057 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C972FC3D1B672E5E00871057 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C972FC481B672E5E00871057 /* Asteroid_QuestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C972FC431B672E5E00871057 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C972FC221B672E5E00871057 /* Asteroid Quest */;
+			targetProxy = C972FC421B672E5E00871057 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C972FC351B672E5E00871057 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C972FC361B672E5E00871057 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C972FC3A1B672E5E00871057 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C972FC3B1B672E5E00871057 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C972FC491B672E5E00871057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C972FC4A1B672E5E00871057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C972FC4C1B672E5E00871057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Asteroid Quest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C972FC4D1B672E5E00871057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Asteroid Quest/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C972FC4F1B672E5E00871057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Asteroid QuestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroid Quest.app/Asteroid Quest";
+			};
+			name = Debug;
+		};
+		C972FC501B672E5E00871057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Asteroid QuestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroid Quest.app/Asteroid Quest";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C972FC1E1B672E5E00871057 /* Build configuration list for PBXProject "Asteroid Quest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C972FC491B672E5E00871057 /* Debug */,
+				C972FC4A1B672E5E00871057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C972FC4B1B672E5E00871057 /* Build configuration list for PBXNativeTarget "Asteroid Quest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C972FC4C1B672E5E00871057 /* Debug */,
+				C972FC4D1B672E5E00871057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C972FC4E1B672E5E00871057 /* Build configuration list for PBXNativeTarget "Asteroid QuestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C972FC4F1B672E5E00871057 /* Debug */,
+				C972FC501B672E5E00871057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C972FC1B1B672E5E00871057 /* Project object */;
+}
