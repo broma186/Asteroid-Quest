@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
+#import "SpaceScene.h"
 
-@interface GameViewController : UIViewController
+@interface GameViewController : UIViewController<SceneDelegate>
+
+@property (nonatomic) ParallaxBackgroundDirection direction;
 
 @end
