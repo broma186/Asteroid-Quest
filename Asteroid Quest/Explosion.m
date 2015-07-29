@@ -61,8 +61,7 @@
         SKAction *remove = [SKAction removeFromParent];
         [self runAction:[SKAction sequence:@[explode,remove]]];
         
-      
-       
+            
     }
     
     return self;

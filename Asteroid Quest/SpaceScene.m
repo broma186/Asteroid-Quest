@@ -12,7 +12,7 @@
 #import "Explosion.h"
 #import "Math.h"
 #import "Bitmasks.h"
-#import "Intelligence.h"
+#import "Intel.h"
 
 @interface SpaceScene ()
 
@@ -28,6 +28,7 @@
 }
 
 static bool destroyed = NO;
+int intelCount = 0;
 
 
 -(id)initWithSize:(CGSize)size {
@@ -88,7 +89,14 @@ static bool destroyed = NO;
     [asteroid setName: @"asteroid"];
     [asteroid setScale:randSize];
     [asteroid setPosition:CGPointMake(randX, self.size.height)];
-    
+    /*
+    asteroid.physicsBody = [SKPhysicsBody bodyWithTexture:asteroid.texture size:self.size];
+    asteroid.physicsBody.dynamic = YES;
+    asteroid.physicsBody.categoryBitMask = asteroidBitMask;
+    asteroid.physicsBody.contactTestBitMask = spaceshipBitMask | missileBitMask;
+    asteroid.physicsBody.collisionBitMask = 0;
+    asteroid.physicsBody.usesPreciseCollisionDetection = YES;
+    */
     [self addChild: asteroid];
     
 }
@@ -117,7 +125,7 @@ static bool destroyed = NO;
     spaceship.physicsBody = [SKPhysicsBody bodyWithTexture:spaceship.texture size:spaceship.size];
     spaceship.physicsBody.dynamic = YES;
     spaceship.physicsBody.categoryBitMask = spaceshipBitMask;
-    spaceship.physicsBody.contactTestBitMask = asteroidBitMask;
+    spaceship.physicsBody.contactTestBitMask = asteroidBitMask | intelBitMask;
     spaceship.physicsBody.collisionBitMask = 0;
     spaceship.physicsBody.usesPreciseCollisionDetection = YES;
     
@@ -188,9 +196,12 @@ static bool destroyed = NO;
             
             SKNode *missile = [self newMissile];
             
-            CGFloat missileDistance = sqrtf((self.frame.size.height -250 - missile.position.y)*(self.frame.size.height - 250 - missile.position.y));
+            /* The distance between the y coordinate of the missile to the top of view.
+               Calculated to make missile animation the same speed regardless of distance.*/
             
-            SKAction *fireMissile = [SKAction moveToY:self.frame.size.height - 250 duration:missileDistance / 300];
+            CGFloat missileDistance = sqrtf((self.frame.size.height - missile.position.y)*(self.frame.size.height - missile.position.y));
+            
+            SKAction *fireMissile = [SKAction moveToY:self.frame.size.height duration:missileDistance / 300];
             
             SKAction *remove = [SKAction removeFromParent];
             [missile runAction:[SKAction sequence:@[fireMissile,remove]]];
@@ -238,6 +249,7 @@ static bool destroyed = NO;
 
 -(void) hitAsteroid:(SKPhysicsBody*) asteroid withMissile:(SKPhysicsBody*)missile
 {
+    
     // Trigger explosion.
     
     Explosion *explosion = [[Explosion alloc] init];
@@ -245,18 +257,32 @@ static bool destroyed = NO;
     explosion.position = CGPointMake(asteroid.node.position.x, asteroid.node.position.y);
     [self addChild: explosion];
     
-    // Add intelligence drop?
     
-    math = [Math new];
-    int randIntelChance = [math randIntValBetweenMin:1 Max: 3];
+   
+     // Add intelligence drop?
     
-    if (randIntelChance == 2) {
-         Intelligence *intel = [[Intelligence alloc] init];
+     // math = [Math new];
+     // int randIntelChance = [math randIntValBetweenMin:1 Max: 3];
+    
+    
+    //if (randIntelChance == 2) {
+         Intel *intel = [[Intel alloc] init];
          intel.name = @"intel";
          intel.position = CGPointMake(asteroid.node.position.x, asteroid.node.position.y);
-         [self addChild:intel];
-    }
     
+         intel.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.size.height / 2];
+         intel.physicsBody.dynamic = YES;
+         intel.physicsBody.categoryBitMask = intelBitMask;
+         intel.physicsBody.contactTestBitMask = spaceshipBitMask;
+         intel.physicsBody.collisionBitMask = 0;
+         intel.physicsBody.usesPreciseCollisionDetection = YES;
+    
+         [self addChild:intel];
+        
+        
+
+    
+   // }
     // Destroy asteroid and missile.
     
     [asteroid.node removeFromParent];
@@ -265,18 +291,16 @@ static bool destroyed = NO;
     // Add to the score.
     
     self.score += 1;
-    scoreLabel.text = [NSString stringWithFormat:@"%lu",self.score];
+    scoreLabel.text = [NSString stringWithFormat:@"%d",(int)self.score];
 }
 
-// For when the player (ship) picks up intelligence.
+
+// For when the player (ship) picks up intelligence. Player earns another 2 points.
 
 - (void)ship:(SKPhysicsBody *)spaceship pickedUpIntel:(SKPhysicsBody *)intel
 {
-    // Player earns another 2 points.
-    
     self.score += 2;
     [intel.node removeFromParent];
-    
     
 }
 
@@ -284,8 +308,13 @@ static bool destroyed = NO;
 
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
-    if(contact.bodyA.node == nil ||
-       contact.bodyB.node == nil){return;}
+    
+ 
+    if (contact.bodyA.node == nil)
+    {
+        return;
+    }
+    
     
     SKPhysicsBody *firstBody, *secondBody;
     
@@ -303,6 +332,8 @@ static bool destroyed = NO;
         
     }
     
+    
+    
     // When a missile hits asteroid.
     
     if ((firstBody.categoryBitMask & missileBitMask) != 0)
@@ -311,28 +342,27 @@ static bool destroyed = NO;
         NSLog(@"missile - ast");
         [self hitAsteroid:secondBody withMissile:firstBody];
         
-        
     }
     
     // Ship colliding with asteroid.
-    /*
+    
      if ((firstBody.categoryBitMask & spaceshipBitMask) != 0)
      
      {
-     NSLog(@"spaceship - asteroid");
-     [self ship:firstBody didCollideWithAsteroid:secondBody];
-     }
-     */
-    
-    // Ship obtaining intelligence pickup.
-    
-    if ((firstBody.categoryBitMask & intelBitMask) != 0)
-        
-    {
-        [self ship:firstBody pickedUpIntel:secondBody];
+         if ((secondBody.categoryBitMask & asteroidBitMask) != 0) {
+             NSLog(@"spaceship - asteroid");
+             [self ship:firstBody didCollideWithAsteroid:secondBody];
+         }
     }
     
+    // For when ship picks up intelligence.
     
+    
+    if ((firstBody.categoryBitMask & intelBitMask) != 0 &&
+        (secondBody.categoryBitMask & spaceshipBitMask) != 0)  {
+         NSLog(@"INTEL COLLISION");
+         [self ship:secondBody pickedUpIntel:firstBody];
+     }
 }
 
 

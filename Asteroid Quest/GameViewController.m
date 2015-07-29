@@ -10,6 +10,9 @@
 #import "SpaceScene.h"
 #import "Score.h"
 
+@interface GameViewController ()
+
+@end
 
 @implementation GameViewController
 {
@@ -50,6 +53,21 @@
     }
 }
 
+- (void) eventStart
+{
+    
+}
+
+- (void) eventPlay
+{
+    
+}
+
+- (void) eventDestroyed
+{
+    
+}
+
 - (BOOL)shouldAutorotate
 {
     return YES;
@@ -67,7 +85,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 - (BOOL)prefersStatusBarHidden {

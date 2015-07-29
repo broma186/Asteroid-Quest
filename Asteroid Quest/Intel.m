@@ -24,16 +24,9 @@
         
         [self setScale:0.05];
         
-        self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.size.height / 2];
-        self.physicsBody.dynamic = YES;
-        self.physicsBody.categoryBitMask = intelBitMask;
-        self.physicsBody.contactTestBitMask = spaceshipBitMask;
-        self.physicsBody.collisionBitMask = 0;
-        self.physicsBody.usesPreciseCollisionDetection = YES;
-        
-        
         // The intelligence pickups must move at the same speed as the scrolling background.
-        SKAction *moveIntel = [SKAction moveToY:0 duration:kParallaxBackgroundDefaultSpeed];
+        SKAction *moveIntel = [SKAction moveToY:0 duration:2];
+        moveIntel.speed = kParallaxBackgroundDefaultSpeed;
         
         SKAction *remove = [SKAction removeFromParent];
         [self runAction:[SKAction sequence:@[moveIntel,remove]]];

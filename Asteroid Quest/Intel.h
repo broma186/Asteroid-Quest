@@ -8,9 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-
 @interface Intel : SKSpriteNode
-
 
 @end
 

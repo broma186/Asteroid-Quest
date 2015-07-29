@@ -172,13 +172,13 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
 }
 - (void) showBackgroundPositions {
     NSLog(@"Parallax background state:");
-    for (NSUInteger i = 0; i < self.numberOfBackgrounds; i++) {
+    for (unsigned int i = 0; i < self.numberOfBackgrounds; i++) {
         // determine the speed of each node
         CGFloat speed = [[self.speeds objectAtIndex:i] floatValue];
         // adjust positions
         SKSpriteNode * bg = [self.backgrounds objectAtIndex:i];
         SKSpriteNode * cBg = [self.clonedBackgrounds objectAtIndex:i];
-        NSLog(@"Layer %u: background1 at (%f, %f), background2 at (%f, %f), speed: %f", i, bg.position.x,bg.position.y, cBg.position.x, cBg.position.y, speed);
+        NSLog(@"Layer %ul: background1 at (%f, %f), background2 at (%f, %f), speed: %f", i, bg.position.x,bg.position.y, cBg.position.x, cBg.position.y, speed);
     }
 }
 @end
