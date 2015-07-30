@@ -45,7 +45,6 @@ int intelCount = 0;
 
 -(void) startGame
 {
-    
     destroyed = NO;
     
     [self removeAllChildren];
@@ -53,7 +52,6 @@ int intelCount = 0;
     [self createScore];
     [self createShip];
     
-    // Asteroids.
     SKAction *generateAsteroids = [SKAction performSelector:@selector(createAsteroids) onTarget:self];
     SKAction *wait = [SKAction waitForDuration:0 withRange:2];
     [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[generateAsteroids, wait]]]];
@@ -63,11 +61,11 @@ int intelCount = 0;
 
 -(void) createBackground
 {
-    // Set parallax scrolling background
+    // Set parallax scrolling background.
     
     self.direction = _direction;
     
-    NSArray * imageNames = @[@"bg_planetsunrise", @"bg_galaxy", @"bg_front_spacedust"];
+    NSArray * imageNames = @[@"bg_front_spacedust",@"bg_planetsunrise", @"bg_galaxy"];
     
     
     ParallaxScrolling *parallax = [[ParallaxScrolling alloc] initWithBackgrounds:imageNames size:self.size direction:kParallaxBackgroundDirectionDown fastestSpeed:kParallaxBackgroundDefaultSpeed andSpeedDecrease:kParallaxBackgroundDefaultSpeedDifferential];
@@ -89,14 +87,7 @@ int intelCount = 0;
     [asteroid setName: @"asteroid"];
     [asteroid setScale:randSize];
     [asteroid setPosition:CGPointMake(randX, self.size.height)];
-    /*
-    asteroid.physicsBody = [SKPhysicsBody bodyWithTexture:asteroid.texture size:self.size];
-    asteroid.physicsBody.dynamic = YES;
-    asteroid.physicsBody.categoryBitMask = asteroidBitMask;
-    asteroid.physicsBody.contactTestBitMask = spaceshipBitMask | missileBitMask;
-    asteroid.physicsBody.collisionBitMask = 0;
-    asteroid.physicsBody.usesPreciseCollisionDetection = YES;
-    */
+   
     [self addChild: asteroid];
     
 }
@@ -111,6 +102,8 @@ int intelCount = 0;
     scoreLabel.position = CGPointMake(20, 20);
     scoreLabel.alpha = 0.2;
     [self addChild:scoreLabel];
+    
+    [_parallaxBackground showBackgroundPositions];
 }
 
 
@@ -163,23 +156,19 @@ int intelCount = 0;
 
 
 
-
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    
     
     for (UITouch *touch in touches) {
         CGPoint touchPoint = [touch locationInNode:self];
         
         NSArray *nodes = [self nodesAtPoint:touchPoint];
         
-# pragma mark - Move spaceship on click.
         
-        // Since reference is unavailable from initWithSize method.
         SKNode *spaceship = [self childNodeWithName:@"spaceship"];
-        
         CGPoint shipPos = spaceship.position;
         
-        // Distance between touchPoint and spaceship location.
+        /* Distance between touchPoint and spaceship location. Needed to maintain
+        constant speed regardless of distance. */
         CGFloat distance = sqrtf((touchPoint.x-shipPos.x)*(touchPoint.x-shipPos.x)+
                                  (touchPoint.y-shipPos.y)*(touchPoint.y-shipPos.y));
         
@@ -187,12 +176,10 @@ int intelCount = 0;
         [spaceship runAction:moveToClick withKey:@"moveToClick"];
         
         
-# pragma mark - Fire missile on Spaceship click.
         
         if([nodes containsObject: [self childNodeWithName:@"spaceship"]]){
             
             // Touched the spaceship, so shoot missiles.
-            
             
             SKNode *missile = [self newMissile];
             
@@ -211,26 +198,6 @@ int intelCount = 0;
 }
 
 
--(void)didSimulatePhysics
-
-{
-    [self enumerateChildNodesWithName:@"missile" usingBlock:^(SKNode *node, BOOL *stop) {
-        
-        if (node.position.y > self.size.height)
-            
-            [node removeFromParent];
-        
-    }];
-    
-    [self enumerateChildNodesWithName:@"asteroid" usingBlock:^(SKNode *node, BOOL *stop) {
-        
-        if (node.position.y < 0- node.frame.size.height)
-            
-            [node removeFromParent];
-        
-    }];
-    
-}
 
 #pragma mark - Collision detection
 
@@ -259,18 +226,19 @@ int intelCount = 0;
     
     
    
-     // Add intelligence drop?
+    // Add intelligence drop?
     
-     // math = [Math new];
-     // int randIntelChance = [math randIntValBetweenMin:1 Max: 3];
+    math = [Math new];
+    int randIntelChance = [math randIntValBetweenMin:1 Max: 3];
     
     
-    //if (randIntelChance == 2) {
+    if (randIntelChance == 2) {
+        
          Intel *intel = [[Intel alloc] init];
          intel.name = @"intel";
          intel.position = CGPointMake(asteroid.node.position.x, asteroid.node.position.y);
     
-         intel.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.size.height / 2];
+         intel.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:intel.size.height / 2];
          intel.physicsBody.dynamic = YES;
          intel.physicsBody.categoryBitMask = intelBitMask;
          intel.physicsBody.contactTestBitMask = spaceshipBitMask;
@@ -279,11 +247,7 @@ int intelCount = 0;
     
          [self addChild:intel];
         
-        
-
-    
-   // }
-    // Destroy asteroid and missile.
+    }
     
     [asteroid.node removeFromParent];
     [missile.node removeFromParent];
@@ -300,69 +264,83 @@ int intelCount = 0;
 - (void)ship:(SKPhysicsBody *)spaceship pickedUpIntel:(SKPhysicsBody *)intel
 {
     self.score += 2;
+    scoreLabel.text = [NSString stringWithFormat:@"%d",(int)self.score];
     [intel.node removeFromParent];
-    
 }
 
 
 
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
-    
- 
-    if (contact.bodyA.node == nil)
+    if (contact.bodyA.node == nil || contact.bodyB.node == nil)
     {
         return;
     }
     
-    
     SKPhysicsBody *firstBody, *secondBody;
-    
     
     if (contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask)
     {
-        
         firstBody = contact.bodyA;
         secondBody = contact.bodyB;
         
     } else {
-        
         firstBody = contact.bodyB;
         secondBody = contact.bodyA;
-        
     }
-    
-    
     
     // When a missile hits asteroid.
     
     if ((firstBody.categoryBitMask & missileBitMask) != 0)
-        
     {
-        NSLog(@"missile - ast");
-        [self hitAsteroid:secondBody withMissile:firstBody];
         
-    }
+        if (secondBody.node.position.y < self.frame.size.height - 140) {
+            [self hitAsteroid:secondBody withMissile:firstBody];
+        }
+     }
+    
     
     // Ship colliding with asteroid.
     
      if ((firstBody.categoryBitMask & spaceshipBitMask) != 0)
-     
      {
          if ((secondBody.categoryBitMask & asteroidBitMask) != 0) {
-             NSLog(@"spaceship - asteroid");
-             [self ship:firstBody didCollideWithAsteroid:secondBody];
+            [self ship:firstBody didCollideWithAsteroid:secondBody];
+         }
+         
+        // For when ship picks up intelligence.
+         
+         if ((secondBody.categoryBitMask & intelBitMask) != 0)
+         {
+             [self ship:firstBody pickedUpIntel:secondBody];
          }
     }
+}
+
+
+
+-(void)didSimulatePhysics
+{
+    [self enumerateChildNodesWithName:@"missile" usingBlock:^(SKNode *node, BOOL *stop) {
+        
+        if (node.position.y > self.frame.size.height)
+            
+            [node removeFromParent];
+    }];
     
-    // For when ship picks up intelligence.
+    [self enumerateChildNodesWithName:@"asteroid" usingBlock:^(SKNode *node, BOOL *stop) {
+        
+        if (node.position.y < 0 - node.frame.size.height)
+            
+            [node removeFromParent];
+    }];
     
-    
-    if ((firstBody.categoryBitMask & intelBitMask) != 0 &&
-        (secondBody.categoryBitMask & spaceshipBitMask) != 0)  {
-         NSLog(@"INTEL COLLISION");
-         [self ship:secondBody pickedUpIntel:firstBody];
-     }
+    [self enumerateChildNodesWithName:@"intel" usingBlock:^(SKNode *node, BOOL *stop) {
+        
+        if (node.position.y < 0 - node.frame.size.height)
+            
+            [node removeFromParent];
+    }];
 }
 
 

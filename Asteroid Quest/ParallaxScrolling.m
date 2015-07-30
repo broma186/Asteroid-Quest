@@ -150,26 +150,8 @@ static inline CGFloat roundFloatToTwoDecimalPlaces(CGFloat num) { return floorf(
         cBg.position = CGPointMake(newCbgX, newCbgY);
     }
 }
-- (void) reverseMovementDirection {
-    ParallaxBackgroundDirection newDirection = self.direction;
-    switch (self.direction) {
-        case kParallaxBackgroundDirectionDown:
-            newDirection = kParallaxBackgroundDirectionUp;
-            break;
-        case kParallaxBackgroundDirectionUp:
-            newDirection = kParallaxBackgroundDirectionDown;
-            break;
-        case kParallaxBackgroundDirectionLeft:
-            newDirection = kParallaxBackgroundDirectionRight;
-            break;
-        case kParallaxBackgroundDirectionRight:
-            newDirection = kParallaxBackgroundDirectionLeft;
-            break;
-        default:
-            break;
-    }
-    self.direction = newDirection;
-}
+
+
 - (void) showBackgroundPositions {
     NSLog(@"Parallax background state:");
     for (unsigned int i = 0; i < self.numberOfBackgrounds; i++) {
