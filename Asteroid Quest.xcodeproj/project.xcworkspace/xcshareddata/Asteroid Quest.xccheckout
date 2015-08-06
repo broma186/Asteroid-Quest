@@ -12,8 +12,6 @@
 	<dict>
 		<key>80AF20C9AFAC36994C77D091F6D507D64101142B</key>
 		<string>https://github.com/broma186/SpaceFlight.git</string>
-		<key>CCB982F7BDEC49DB2531A9479F4B5DE0912F0F0B</key>
-		<string>https://github.com/broma186/SpaceMission-iOS.git</string>
 		<key>F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F</key>
 		<string>https://github.com/broma186/Asteroid-Quest.git</string>
 	</dict>
@@ -23,8 +21,6 @@
 	<dict>
 		<key>80AF20C9AFAC36994C77D091F6D507D64101142B</key>
 		<string>../../../SpaceFlight</string>
-		<key>CCB982F7BDEC49DB2531A9479F4B5DE0912F0F0B</key>
-		<string>../../../SpaceMission</string>
 		<key>F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F</key>
 		<string>../..</string>
 	</dict>
@@ -51,14 +47,6 @@
 			<string>80AF20C9AFAC36994C77D091F6D507D64101142B</string>
 			<key>IDESourceControlWCCName</key>
 			<string>SpaceFlight</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>CCB982F7BDEC49DB2531A9479F4B5DE0912F0F0B</string>
-			<key>IDESourceControlWCCName</key>
-			<string>SpaceMission</string>
 		</dict>
 	</array>
 </dict>

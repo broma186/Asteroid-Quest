@@ -7,6 +7,7 @@
 //
 
 #import "SpaceScene.h"
+#import "Spaceship.h"
 #import "Score.h"
 #import "Asteroid.h"
 #import "Explosion.h"
@@ -23,12 +24,13 @@
 
 @implementation SpaceScene {
     
+    Spaceship *ship;
     SKLabelNode * scoreLabel;
     Math *math;
+   
 }
 
 static bool destroyed = NO;
-int intelCount = 0;
 
 
 -(id)initWithSize:(CGSize)size {
@@ -52,9 +54,9 @@ int intelCount = 0;
     [self createScore];
     [self createShip];
     
-    SKAction *generateAsteroids = [SKAction performSelector:@selector(createAsteroids) onTarget:self];
-    SKAction *wait = [SKAction waitForDuration:0 withRange:2];
-    [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[generateAsteroids, wait]]]];
+    if([self.delegate respondsToSelector:@selector(gameStart)]){
+        [self.delegate gameStart];
+    }
     
 }
 
@@ -103,26 +105,17 @@ int intelCount = 0;
     scoreLabel.alpha = 0.2;
     [self addChild:scoreLabel];
     
-    [_parallaxBackground showBackgroundPositions];
 }
 
 
 -(void) createShip
 {
     
-    SKSpriteNode *spaceship = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship!"];
-    spaceship.name = @"spaceship";
-    spaceship.position = CGPointMake(self.size.width / 2, 20);
-    [spaceship setScale:0.05];
-    
-    spaceship.physicsBody = [SKPhysicsBody bodyWithTexture:spaceship.texture size:spaceship.size];
-    spaceship.physicsBody.dynamic = YES;
-    spaceship.physicsBody.categoryBitMask = spaceshipBitMask;
-    spaceship.physicsBody.contactTestBitMask = asteroidBitMask | intelBitMask;
-    spaceship.physicsBody.collisionBitMask = 0;
-    spaceship.physicsBody.usesPreciseCollisionDetection = YES;
-    
-    [self addChild:spaceship];
+    ship = [Spaceship new];
+    [ship setName:@"spaceship"];
+    [ship setPosition: CGPointMake(self.size.width / 2, 20)];
+    [self addChild:ship];
+ 
     
 }
 
@@ -158,11 +151,29 @@ int intelCount = 0;
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
+    if (destroyed) {
+        [self startGame];
+    }else {
+        if (!ship.physicsBody) {
+            
+            /* started playing so add physics body to spaceship, remove ready menu,
+            and create the asteroids. */
+            
+            [ship startPlaying];
+            if([self.delegate respondsToSelector:@selector(gamePlay)]){
+                [self.delegate gamePlay];
+            }
+            SKAction *generateAsteroids = [SKAction performSelector:@selector(createAsteroids) onTarget:self];
+            SKAction *wait = [SKAction waitForDuration:0 withRange:2];
+            [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[generateAsteroids, wait]]] withKey:@"asteroidGen"];
+            
+        }
+    }
+    
     for (UITouch *touch in touches) {
         CGPoint touchPoint = [touch locationInNode:self];
         
         NSArray *nodes = [self nodesAtPoint:touchPoint];
-        
         
         SKNode *spaceship = [self childNodeWithName:@"spaceship"];
         CGPoint shipPos = spaceship.position;
@@ -172,12 +183,12 @@ int intelCount = 0;
         CGFloat distance = sqrtf((touchPoint.x-shipPos.x)*(touchPoint.x-shipPos.x)+
                                  (touchPoint.y-shipPos.y)*(touchPoint.y-shipPos.y));
         
-        SKAction *moveToClick = [SKAction moveTo:touchPoint duration: distance /300];
+        SKAction *moveToClick = [SKAction moveTo:touchPoint duration:distance /300];
         [spaceship runAction:moveToClick withKey:@"moveToClick"];
         
         
         
-        if([nodes containsObject: [self childNodeWithName:@"spaceship"]]){
+        if([nodes containsObject:[self childNodeWithName:@"spaceship"]]){
             
             // Touched the spaceship, so shoot missiles.
             
@@ -204,6 +215,8 @@ int intelCount = 0;
 
 - (void)ship:(SKPhysicsBody *)spaceship didCollideWithAsteroid:(SKPhysicsBody *)asteroid
 {
+    destroyed = true;
+    
     Explosion *explosion = [[Explosion alloc] init];
     explosion.name = @"explosion";
     explosion.position = CGPointMake(spaceship.node.position.x, spaceship.node.position.y);
@@ -211,6 +224,15 @@ int intelCount = 0;
     
     [asteroid.node removeFromParent];
     [spaceship.node removeFromParent];
+    
+    [Score registerScore:self.score];
+    
+    if([self.delegate respondsToSelector:@selector(spaceshipDestroyed)]){
+        [self.delegate spaceshipDestroyed];
+    }
+    // Cease asteroid flow.
+    [self removeActionForKey:@"asteroidGen"];
+   
 }
 
 
@@ -272,7 +294,9 @@ int intelCount = 0;
 
 - (void)didBeginContact:(SKPhysicsContact *)contact
 {
-    if (contact.bodyA.node == nil || contact.bodyB.node == nil)
+    
+    
+    if (contact.bodyA.node == nil || contact.bodyB.node == nil || destroyed)
     {
         return;
     }
@@ -294,7 +318,7 @@ int intelCount = 0;
     if ((firstBody.categoryBitMask & missileBitMask) != 0)
     {
         
-        if (secondBody.node.position.y < self.frame.size.height - 140) {
+        if (secondBody.node.position.y < self.frame.size.height) {
             [self hitAsteroid:secondBody withMissile:firstBody];
         }
      }

@@ -12,6 +12,17 @@
 
 @interface GameViewController ()
 
+@property (strong, nonatomic) IBOutlet SKView *gameView;
+@property (strong, nonatomic) IBOutlet UIView *startGameView;
+@property (strong, nonatomic) IBOutlet UILabel *startDescription;
+
+@property (strong, nonatomic) IBOutlet UIView *destroyedView;
+@property (strong, nonatomic) IBOutlet UILabel *yourScore;
+@property (strong, nonatomic) IBOutlet UILabel *topScore;
+
+
+
+
 @end
 
 @implementation GameViewController
@@ -22,50 +33,75 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    // Configure the view.
-    SKView * skView = (SKView *) self.view;
-    if ([skView.scene isKindOfClass:[SpaceScene class]]) {
-        SpaceScene *spaceScene = (SpaceScene *) skView.scene;
-        spaceScene.direction = self.direction;
-    }
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    
+    // Create and configure the scene.
+    scene = [SpaceScene sceneWithSize:self.gameView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.delegate = self;
+    
+    // Present the scene
+    self.destroyedView.alpha = 0;
+    self.destroyedView.transform = CGAffineTransformMakeScale(.9, .9);
+    [self.gameView presentScene:scene];
+    
 }
 
-- (void)viewWillLayoutSubviews
+/* This method is implemented to customize the start game description label
+   programmatically. */
+
+- (void) viewDidLayoutSubviews
 {
+    [super viewDidLayoutSubviews];
     
-    [super viewWillLayoutSubviews];
+    self.startDescription.text = @"Shoot the asteroids and collect intel to score!\nAvoid the asteroids or be destroyed.\n\nShoot asteroid - 1 Point\n\nCollect intel - 2 Points";
     
-    // Configure the view.
-    SKView * skView = (SKView *)self.view;
+    self.startDescription.font = [UIFont systemFontOfSize:14];
     
-    if (!skView.scene) {
-        skView.showsFPS = YES;
-        skView.showsNodeCount = YES;
+    self.startDescription.lineBreakMode = NSLineBreakByWordWrapping;
+    self.startDescription.numberOfLines = 0;
+}
+
+
+- (void) gameStart
+{
+    [UIView animateWithDuration:.2 animations:^{
         
-        // Create and configure the scene.
-        SKScene * spaceScene = [[SpaceScene alloc] initWithSize:skView.bounds.size];
-        spaceScene.scaleMode = SKSceneScaleModeAspectFill;
-        spaceScene.physicsBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:scene.frame];
+        self.destroyedView.alpha = 0;
+        self.destroyedView.transform = CGAffineTransformMakeScale(.8, .8);
         
-        // Present the scene.
-        [skView presentScene:spaceScene];
+        self.startGameView.alpha = 1;
+       
+    }completion:^(BOOL finished) {
+           NSLog(@"game started");
+    }];
+}
+
+- (void) gamePlay
+{
+    [UIView animateWithDuration:.5 animations:^{
+        self.startGameView.alpha = 0;
+   
+    }];
+}
+
+- (void) spaceshipDestroyed
+{
+
+    
+    [UIView animateWithDuration:.9 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+     self.destroyedView.alpha = 1;
+     self.destroyedView.transform = CGAffineTransformMakeScale(1, 1);
+     
+     self.yourScore.text = [NSString stringWithFormat:@"%d",(int)scene.score];
+     self.topScore.text = [NSString stringWithFormat:@"%d",(int)[Score bestScore]];
+     
     }
-}
-
-- (void) eventStart
-{
-    
-}
-
-- (void) eventPlay
-{
-    
-}
-
-- (void) eventDestroyed
-{
-    
+     
+    completion:^(BOOL finished) {
+        NSLog(@"Game over menu reached");
+    }];
 }
 
 - (BOOL)shouldAutorotate
