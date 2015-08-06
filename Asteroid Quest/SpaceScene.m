@@ -14,6 +14,7 @@
 #import "Math.h"
 #import "Bitmasks.h"
 #import "Intel.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface SpaceScene ()
 
@@ -27,6 +28,9 @@
     Spaceship *ship;
     SKLabelNode * scoreLabel;
     Math *math;
+    AVAudioPlayer *player;
+    SKAction *generateAsteroids;
+    SKAction *wait;
    
 }
 
@@ -116,7 +120,7 @@ static bool destroyed = NO;
     [ship setPosition: CGPointMake(self.size.width / 2, 20)];
     [self addChild:ship];
  
-    
+   
 }
 
 # pragma mark - Create new missile.
@@ -163,9 +167,23 @@ static bool destroyed = NO;
             if([self.delegate respondsToSelector:@selector(gamePlay)]){
                 [self.delegate gamePlay];
             }
-            SKAction *generateAsteroids = [SKAction performSelector:@selector(createAsteroids) onTarget:self];
-            SKAction *wait = [SKAction waitForDuration:0 withRange:2];
+            
+        
+            
+            // Make the asteroids move.
+            generateAsteroids = [SKAction performSelector:@selector(createAsteroids) onTarget:self];
+            wait = [SKAction waitForDuration:0 withRange:2];
             [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[generateAsteroids, wait]]] withKey:@"asteroidGen"];
+            
+         
+            // Play spaceship move sound.
+           /* NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                                 pathForResource:@"Click.caf"
+                                                 ofType:nil]];
+            
+            player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+            player.numberOfLoops = -1;*/
+          
             
         }
     }

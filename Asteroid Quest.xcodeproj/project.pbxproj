@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C93C33021B673D3C00A13973 /* Intel.m in Sources */ = {isa = PBXBuildFile; fileRef = C93C33011B673D3C00A13973 /* Intel.m */; };
+		C94A58C91B741B22006DCAC0 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C94A58C81B741B22006DCAC0 /* SoundManager.m */; };
 		C972FC291B672E5E00871057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC281B672E5E00871057 /* main.m */; };
 		C972FC2C1B672E5E00871057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2B1B672E5E00871057 /* AppDelegate.m */; };
 		C972FC2F1B672E5E00871057 /* SpaceScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2E1B672E5E00871057 /* SpaceScene.m */; };
@@ -60,6 +61,7 @@
 		C975ADE21B6739A900219585 /* Spaceship!.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE11B6739A900219585 /* Spaceship!.png */; };
 		C975ADE41B673A0A00219585 /* Brown-Bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE31B673A0A00219585 /* Brown-Bullet.png */; };
 		C98373F81B6DE8760077B9CA /* Spaceship.m in Sources */ = {isa = PBXBuildFile; fileRef = C98373F71B6DE8760077B9CA /* Spaceship.m */; };
+		C9F495FE1B7316F30044901B /* rocket-boost-engine-loop.wav in Resources */ = {isa = PBXBuildFile; fileRef = C9F495FD1B7316F30044901B /* rocket-boost-engine-loop.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 /* Begin PBXFileReference section */
 		C93C33011B673D3C00A13973 /* Intel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intel.m; sourceTree = "<group>"; };
 		C93C33031B673D5000A13973 /* Intel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Intel.h; sourceTree = "<group>"; };
+		C94A58C71B741B22006DCAC0 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = "../../Tappy-Plane-master/Tappy Plane/SoundManager.h"; sourceTree = "<group>"; };
+		C94A58C81B741B22006DCAC0 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = "../../Tappy-Plane-master/Tappy Plane/SoundManager.m"; sourceTree = "<group>"; };
 		C972FC231B672E5E00871057 /* Asteroid Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asteroid Quest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C972FC271B672E5E00871057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C972FC281B672E5E00871057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -141,13 +145,15 @@
 		C975ADE31B673A0A00219585 /* Brown-Bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Brown-Bullet.png"; path = "../../Downloads/Brown-Bullet.png"; sourceTree = "<group>"; };
 		C98373F31B6DE80D0077B9CA /* Spaceship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spaceship.h; sourceTree = "<group>"; };
 		C98373F71B6DE8760077B9CA /* Spaceship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spaceship.m; sourceTree = "<group>"; };
-		C9F495EF1B72E40C0044901B /* bomb_explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bomb_explosion.caf; path = ../../Downloads/bomb_explosion.caf; sourceTree = "<group>"; };
-		C9F495F01B72E40C0044901B /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = explosion.caf; path = ../../Downloads/explosion.caf; sourceTree = "<group>"; };
-		C9F495F11B72E40C0044901B /* blast.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = blast.caf; path = ../../Downloads/blast.caf; sourceTree = "<group>"; };
-		C9F495F21B72E40C0044901B /* explosion_large.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = explosion_large.caf; path = ../../Downloads/explosion_large.caf; sourceTree = "<group>"; };
-		C9F495F31B72E40C0044901B /* energy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = energy.caf; path = ../../Downloads/energy.caf; sourceTree = "<group>"; };
-		C9F495F41B72E40C0044901B /* ship_fire.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ship_fire.caf; path = ../../Downloads/ship_fire.caf; sourceTree = "<group>"; };
-		C9F495F51B72E40C0044901B /* rocket_loop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = rocket_loop.caf; path = ../../Downloads/rocket_loop.caf; sourceTree = "<group>"; };
+		C9F495F61B7316A10044901B /* bombexplosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bombexplosion.caf; path = ../../Downloads/bombexplosion.caf; sourceTree = "<group>"; };
+		C9F495F71B7316A10044901B /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = explosion.caf; path = ../../Downloads/explosion.caf; sourceTree = "<group>"; };
+		C9F495F81B7316A10044901B /* blast.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = blast.caf; path = ../../Downloads/blast.caf; sourceTree = "<group>"; };
+		C9F495F91B7316A10044901B /* explosion2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = explosion2.caf; path = ../../Downloads/explosion2.caf; sourceTree = "<group>"; };
+		C9F495FA1B7316A10044901B /* energy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = energy.caf; path = ../../Downloads/energy.caf; sourceTree = "<group>"; };
+		C9F495FB1B7316A10044901B /* ship_fire.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ship_fire.caf; path = ../../Downloads/ship_fire.caf; sourceTree = "<group>"; };
+		C9F495FC1B7316A10044901B /* spaceship_loop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = spaceship_loop.caf; path = ../../Downloads/spaceship_loop.caf; sourceTree = "<group>"; };
+		C9F495FD1B7316F30044901B /* rocket-boost-engine-loop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "rocket-boost-engine-loop.wav"; path = "../../Downloads/rocket-boost-engine-loop.wav"; sourceTree = "<group>"; };
+		C9F495FF1B7321AD0044901B /* Click.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Click.caf; path = "../Tappy-Plane-master/Tappy Plane/Sounds/Click.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +198,8 @@
 		C972FC251B672E5E00871057 /* Asteroid Quest */ = {
 			isa = PBXGroup;
 			children = (
+				C94A58C71B741B22006DCAC0 /* SoundManager.h */,
+				C94A58C81B741B22006DCAC0 /* SoundManager.m */,
 				C975AD861B67306800219585 /* Score.h */,
 				C975AD871B67306800219585 /* Score.m */,
 				C93C33031B673D5000A13973 /* Intel.h */,
@@ -302,13 +310,15 @@
 		C975ADD71B6737F300219585 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				C9F495EF1B72E40C0044901B /* bomb_explosion.caf */,
-				C9F495F01B72E40C0044901B /* explosion.caf */,
-				C9F495F11B72E40C0044901B /* blast.caf */,
-				C9F495F21B72E40C0044901B /* explosion_large.caf */,
-				C9F495F31B72E40C0044901B /* energy.caf */,
-				C9F495F41B72E40C0044901B /* ship_fire.caf */,
-				C9F495F51B72E40C0044901B /* rocket_loop.caf */,
+				C9F495FD1B7316F30044901B /* rocket-boost-engine-loop.wav */,
+				C9F495F61B7316A10044901B /* bombexplosion.caf */,
+				C9F495F71B7316A10044901B /* explosion.caf */,
+				C9F495F81B7316A10044901B /* blast.caf */,
+				C9F495F91B7316A10044901B /* explosion2.caf */,
+				C9F495FA1B7316A10044901B /* energy.caf */,
+				C9F495FF1B7321AD0044901B /* Click.caf */,
+				C9F495FB1B7316A10044901B /* ship_fire.caf */,
+				C9F495FC1B7316A10044901B /* spaceship_loop.caf */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -427,6 +437,7 @@
 				C975ADCA1B67378700219585 /* explosion13.png in Resources */,
 				C975ADB21B67378700219585 /* asteroid2.1.png in Resources */,
 				C975ADB31B67378700219585 /* asteroid2.2.png in Resources */,
+				C9F495FE1B7316F30044901B /* rocket-boost-engine-loop.wav in Resources */,
 				C975ADBB1B67378700219585 /* asteroid4.2.png in Resources */,
 				C975ADAF1B67378700219585 /* asteroid1.2.png in Resources */,
 				C972FC371B672E5E00871057 /* Main.storyboard in Resources */,
@@ -460,6 +471,7 @@
 				C972FC2C1B672E5E00871057 /* AppDelegate.m in Sources */,
 				C93C33021B673D3C00A13973 /* Intel.m in Sources */,
 				C975AD8C1B67306800219585 /* Score.m in Sources */,
+				C94A58C91B741B22006DCAC0 /* SoundManager.m in Sources */,
 				C972FC2F1B672E5E00871057 /* SpaceScene.m in Sources */,
 				C972FC291B672E5E00871057 /* main.m in Sources */,
 			);

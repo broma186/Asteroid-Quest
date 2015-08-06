@@ -80,6 +80,8 @@
 
 - (void) gamePlay
 {
+   
+    
     [UIView animateWithDuration:.5 animations:^{
         self.startGameView.alpha = 0;
    
