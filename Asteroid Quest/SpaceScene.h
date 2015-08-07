@@ -9,6 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "ParallaxScrolling.h"
 
+
 @protocol SceneDelegate <NSObject>
 - (void) gameStart;
 - (void) gamePlay;

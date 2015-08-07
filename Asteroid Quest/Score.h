@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 #define kBestScoreKey @"BestScore"
 
 @interface Score : NSObject

@@ -20,6 +20,7 @@
 
 @property (nonatomic, strong) ParallaxScrolling * parallaxBackground;
 
+
 @end
 
 
@@ -175,7 +176,7 @@ static bool destroyed = NO;
             wait = [SKAction waitForDuration:0 withRange:2];
             [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[generateAsteroids, wait]]] withKey:@"asteroidGen"];
             
-         
+            
             // Play spaceship move sound.
            /* NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
                                                  pathForResource:@"Click.caf"

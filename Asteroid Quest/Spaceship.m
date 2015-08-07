@@ -8,6 +8,11 @@
 
 #import "Spaceship.h"
 #import "Bitmasks.h"
+#import "SoundManager.h"
+
+@interface Spaceship ()
+@property (nonatomic) Sound *spaceshipSound;
+@end
 
 @implementation Spaceship
 
@@ -30,6 +35,16 @@
 
 -(void) startPlaying
 {
+    
+    // add sound
+ 
+   // [[SoundManager sharedManager] prepareToPlayWithSound:@"spaceship_loop.caf"];
+    //[[SoundManager sharedManager] playSound:@"spaceship_loop.caf"];
+   // _spaceshipSound = [Sound soundNamed:@"spaceship_loop.caf"];
+   // _spaceshipSound.looping = YES;
+   // [self.spaceshipSound play];
+   // [self.spaceshipSound fadeIn:1.0];
+   
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
     self.physicsBody.dynamic = YES;
     self.physicsBody.categoryBitMask = spaceshipBitMask;
