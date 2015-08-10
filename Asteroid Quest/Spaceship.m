@@ -10,15 +10,16 @@
 #import "Bitmasks.h"
 #import "SoundManager.h"
 
-@interface Spaceship ()
-@property (nonatomic) Sound *spaceshipSound;
-@end
+
 
 @implementation Spaceship
 
 -(id) init {
 
     if (self == [super init]){
+        
+        // Init audio.
+        [[SoundManager sharedManager] prepareToPlayWithSound:@"energy.caf"];
         
         SKTexture * spaceshipTexture = [SKTexture textureWithImageNamed:@"Spaceship!.png"];
         spaceshipTexture.filteringMode = SKTextureFilteringNearest;
@@ -28,22 +29,14 @@
         [self setScale:0.05];
     
     }
-    
     return self;
-    
 }
 
 -(void) startPlaying
 {
-    
-    // add sound
+   
  
-   // [[SoundManager sharedManager] prepareToPlayWithSound:@"spaceship_loop.caf"];
-    //[[SoundManager sharedManager] playSound:@"spaceship_loop.caf"];
-   // _spaceshipSound = [Sound soundNamed:@"spaceship_loop.caf"];
-   // _spaceshipSound.looping = YES;
-   // [self.spaceshipSound play];
-   // [self.spaceshipSound fadeIn:1.0];
+  
    
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
     self.physicsBody.dynamic = YES;

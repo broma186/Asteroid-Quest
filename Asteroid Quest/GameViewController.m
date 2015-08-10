@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 #import "SpaceScene.h"
 #import "Score.h"
+#import "SoundManager.h"
 
 @interface GameViewController ()
 
@@ -21,13 +22,13 @@
 @property (strong, nonatomic) IBOutlet UILabel *topScore;
 
 
-
-
 @end
 
 @implementation GameViewController
 {
     SpaceScene * scene;
+    Sound *_spaceshipSound;
+
 }
 
 - (void)viewDidLoad
@@ -46,6 +47,11 @@
     self.destroyedView.transform = CGAffineTransformMakeScale(.9, .9);
     [self.gameView presentScene:scene];
     
+    # pragma mark - Sound
+    
+    _spaceshipSound = [Sound soundNamed:[NSString stringWithFormat:@"%@/Sound/spaceship_loop.caf", [[NSBundle mainBundle] resourcePath]]];
+    _spaceshipSound.looping = YES;
+ 
 }
 
 /* This method is implemented to customize the start game description label
@@ -61,6 +67,8 @@
     
     self.startDescription.lineBreakMode = NSLineBreakByWordWrapping;
     self.startDescription.numberOfLines = 0;
+    
+    
 }
 
 
@@ -81,6 +89,8 @@
 - (void) gamePlay
 {
    
+    [_spaceshipSound play];
+    [_spaceshipSound fadeIn:1.0];
     
     [UIView animateWithDuration:.5 animations:^{
         self.startGameView.alpha = 0;
@@ -90,7 +100,9 @@
 
 - (void) spaceshipDestroyed
 {
-
+    // Fade out sound
+    
+    [_spaceshipSound fadeOut:1.0];
     
     [UIView animateWithDuration:.9 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
      self.destroyedView.alpha = 1;

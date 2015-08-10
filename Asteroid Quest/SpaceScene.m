@@ -14,7 +14,9 @@
 #import "Math.h"
 #import "Bitmasks.h"
 #import "Intel.h"
-#import <AVFoundation/AVFoundation.h>
+#import "SoundManager.h"
+
+
 
 @interface SpaceScene ()
 
@@ -29,9 +31,13 @@
     Spaceship *ship;
     SKLabelNode * scoreLabel;
     Math *math;
-    AVAudioPlayer *player;
     SKAction *generateAsteroids;
     SKAction *wait;
+    Sound *laserSound;
+    Sound *explosionSound;
+    Sound *explosionShipSound;
+    Sound *pickupSound;
+    
    
 }
 
@@ -58,6 +64,7 @@ static bool destroyed = NO;
     [self createBackground];
     [self createScore];
     [self createShip];
+    [self initializeSound];
     
     if([self.delegate respondsToSelector:@selector(gameStart)]){
         [self.delegate gameStart];
@@ -120,8 +127,24 @@ static bool destroyed = NO;
     [ship setName:@"spaceship"];
     [ship setPosition: CGPointMake(self.size.width / 2, 20)];
     [self addChild:ship];
+    
  
-   
+}
+
+# pragma mark - Initialize Sound.
+
+- (void) initializeSound {
+    
+    // Laser
+    laserSound = [Sound soundNamed:[NSString stringWithFormat:@"%@/Sound/ship_fire.caf", [[NSBundle mainBundle] resourcePath]]];
+    
+    // Asteroid - Laser explosion
+    explosionSound = [Sound soundNamed:[NSString stringWithFormat:@"%@/Sound/explosion.caf", [[NSBundle mainBundle] resourcePath]]];
+    
+    // Pickup intel sound.
+    pickupSound = [Sound soundNamed:[NSString stringWithFormat:@"%@/Sound/pickup.caf", [[NSBundle mainBundle] resourcePath]]];
+    
+    
 }
 
 # pragma mark - Create new missile.
@@ -176,16 +199,6 @@ static bool destroyed = NO;
             wait = [SKAction waitForDuration:0 withRange:2];
             [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[generateAsteroids, wait]]] withKey:@"asteroidGen"];
             
-            
-            // Play spaceship move sound.
-           /* NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                 pathForResource:@"Click.caf"
-                                                 ofType:nil]];
-            
-            player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
-            player.numberOfLoops = -1;*/
-          
-            
         }
     }
     
@@ -223,6 +236,10 @@ static bool destroyed = NO;
             SKAction *remove = [SKAction removeFromParent];
             [missile runAction:[SKAction sequence:@[fireMissile,remove]]];
             
+            // Play laser sound
+            
+            [laserSound play];
+            
         }
     }
 }
@@ -240,6 +257,8 @@ static bool destroyed = NO;
     explosion.name = @"explosion";
     explosion.position = CGPointMake(spaceship.node.position.x, spaceship.node.position.y);
     [self addChild: explosion];
+    
+    [explosionSound play];
     
     [asteroid.node removeFromParent];
     [spaceship.node removeFromParent];
@@ -265,7 +284,7 @@ static bool destroyed = NO;
     explosion.position = CGPointMake(asteroid.node.position.x, asteroid.node.position.y);
     [self addChild: explosion];
     
-    
+    [explosionSound play];
    
     // Add intelligence drop?
     
@@ -307,6 +326,8 @@ static bool destroyed = NO;
     self.score += 2;
     scoreLabel.text = [NSString stringWithFormat:@"%d",(int)self.score];
     [intel.node removeFromParent];
+    
+    [pickupSound play];
 }
 
 

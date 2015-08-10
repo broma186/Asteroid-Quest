@@ -61,6 +61,7 @@
 		C975ADE21B6739A900219585 /* Spaceship!.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE11B6739A900219585 /* Spaceship!.png */; };
 		C975ADE41B673A0A00219585 /* Brown-Bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE31B673A0A00219585 /* Brown-Bullet.png */; };
 		C98373F81B6DE8760077B9CA /* Spaceship.m in Sources */ = {isa = PBXBuildFile; fileRef = C98373F71B6DE8760077B9CA /* Spaceship.m */; };
+		C9DBAB141B781DE200C1DA73 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = C9DBAB131B781DE200C1DA73 /* Sound */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,13 +145,7 @@
 		C975ADE31B673A0A00219585 /* Brown-Bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Brown-Bullet.png"; path = "../../Downloads/Brown-Bullet.png"; sourceTree = "<group>"; };
 		C98373F31B6DE80D0077B9CA /* Spaceship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spaceship.h; sourceTree = "<group>"; };
 		C98373F71B6DE8760077B9CA /* Spaceship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spaceship.m; sourceTree = "<group>"; };
-		C9F495F61B7316A10044901B /* bombexplosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bombexplosion.caf; path = ../../Downloads/bombexplosion.caf; sourceTree = "<group>"; };
-		C9F495F71B7316A10044901B /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = explosion.caf; path = ../../Downloads/explosion.caf; sourceTree = "<group>"; };
-		C9F495F81B7316A10044901B /* blast.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = blast.caf; path = ../../Downloads/blast.caf; sourceTree = "<group>"; };
-		C9F495F91B7316A10044901B /* explosion2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = explosion2.caf; path = ../../Downloads/explosion2.caf; sourceTree = "<group>"; };
-		C9F495FA1B7316A10044901B /* energy.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = energy.caf; path = ../../Downloads/energy.caf; sourceTree = "<group>"; };
-		C9F495FB1B7316A10044901B /* ship_fire.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = ship_fire.caf; path = ../../Downloads/ship_fire.caf; sourceTree = "<group>"; };
-		C9F495FC1B7316A10044901B /* spaceship_loop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = spaceship_loop.caf; path = ../../Downloads/spaceship_loop.caf; sourceTree = "<group>"; };
+		C9DBAB131B781DE200C1DA73 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sound; path = ../../Downloads/Sound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +169,7 @@
 		C972FC1A1B672E5E00871057 = {
 			isa = PBXGroup;
 			children = (
-				C975ADD71B6737F300219585 /* Sounds */,
+				C9DBAB131B781DE200C1DA73 /* Sound */,
 				C975ADCC1B6737D100219585 /* Backgrounds */,
 				C975ADCB1B67378C00219585 /* Images */,
 				C972FC251B672E5E00871057 /* Asteroid Quest */,
@@ -304,20 +299,6 @@
 			name = Backgrounds;
 			sourceTree = "<group>";
 		};
-		C975ADD71B6737F300219585 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				C9F495F61B7316A10044901B /* bombexplosion.caf */,
-				C9F495F71B7316A10044901B /* explosion.caf */,
-				C9F495F81B7316A10044901B /* blast.caf */,
-				C9F495F91B7316A10044901B /* explosion2.caf */,
-				C9F495FA1B7316A10044901B /* energy.caf */,
-				C9F495FB1B7316A10044901B /* ship_fire.caf */,
-				C9F495FC1B7316A10044901B /* spaceship_loop.caf */,
-			);
-			name = Sounds;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -434,6 +415,7 @@
 				C975ADB31B67378700219585 /* asteroid2.2.png in Resources */,
 				C975ADBB1B67378700219585 /* asteroid4.2.png in Resources */,
 				C975ADAF1B67378700219585 /* asteroid1.2.png in Resources */,
+				C9DBAB141B781DE200C1DA73 /* Sound in Resources */,
 				C972FC371B672E5E00871057 /* Main.storyboard in Resources */,
 				C975ADE01B67397800219585 /* intel.png in Resources */,
 				C975ADC01B67378700219585 /* explosion3.png in Resources */,
