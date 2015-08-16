@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F" : 0,
+    "80AF20C9AFAC36994C77D091F6D507D64101142B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "55922379-1F95-4199-9ED0-525435B7EEF1",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F" : "Asteroid%20Quest",
+    "80AF20C9AFAC36994C77D091F6D507D64101142B" : "SpaceFlight"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Asteroid Quest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Asteroid Quest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/broma186\/SpaceFlight.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "80AF20C9AFAC36994C77D091F6D507D64101142B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/broma186\/Asteroid-Quest.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F6FB79B9EA5B95A0C6B1698BB55F6A7828A2A48F"
+    }
+  ]
+}

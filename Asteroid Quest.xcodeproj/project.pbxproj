@@ -12,12 +12,10 @@
 		C972FC291B672E5E00871057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC281B672E5E00871057 /* main.m */; };
 		C972FC2C1B672E5E00871057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2B1B672E5E00871057 /* AppDelegate.m */; };
 		C972FC2F1B672E5E00871057 /* SpaceScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2E1B672E5E00871057 /* SpaceScene.m */; };
-		C972FC311B672E5E00871057 /* SpaceScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C972FC301B672E5E00871057 /* SpaceScene.sks */; };
 		C972FC341B672E5E00871057 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC331B672E5E00871057 /* GameViewController.m */; };
 		C972FC371B672E5E00871057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C972FC351B672E5E00871057 /* Main.storyboard */; };
 		C972FC391B672E5E00871057 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C972FC381B672E5E00871057 /* Images.xcassets */; };
 		C972FC3C1B672E5E00871057 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C972FC3A1B672E5E00871057 /* LaunchScreen.xib */; };
-		C972FC481B672E5E00871057 /* Asteroid_QuestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC471B672E5E00871057 /* Asteroid_QuestTests.m */; };
 		C975AD841B67305600219585 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = C975AD811B67305600219585 /* Math.m */; };
 		C975AD851B67305600219585 /* ParallaxScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = C975AD831B67305600219585 /* ParallaxScrolling.m */; };
 		C975AD8C1B67306800219585 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = C975AD871B67306800219585 /* Score.m */; };
@@ -61,18 +59,9 @@
 		C975ADE21B6739A900219585 /* Spaceship!.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE11B6739A900219585 /* Spaceship!.png */; };
 		C975ADE41B673A0A00219585 /* Brown-Bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE31B673A0A00219585 /* Brown-Bullet.png */; };
 		C98373F81B6DE8760077B9CA /* Spaceship.m in Sources */ = {isa = PBXBuildFile; fileRef = C98373F71B6DE8760077B9CA /* Spaceship.m */; };
+		C9B83D781B8018D700D20DA3 /* stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9B83D761B8018D700D20DA3 /* stars.sks */; };
 		C9DBAB141B781DE200C1DA73 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = C9DBAB131B781DE200C1DA73 /* Sound */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		C972FC421B672E5E00871057 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C972FC1B1B672E5E00871057 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C972FC221B672E5E00871057;
-			remoteInfo = "Asteroid Quest";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C93C33011B673D3C00A13973 /* Intel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Intel.m; sourceTree = "<group>"; };
@@ -86,15 +75,11 @@
 		C972FC2B1B672E5E00871057 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C972FC2D1B672E5E00871057 /* SpaceScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpaceScene.h; sourceTree = "<group>"; };
 		C972FC2E1B672E5E00871057 /* SpaceScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceScene.m; sourceTree = "<group>"; };
-		C972FC301B672E5E00871057 /* SpaceScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SpaceScene.sks; sourceTree = "<group>"; };
 		C972FC321B672E5E00871057 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		C972FC331B672E5E00871057 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		C972FC361B672E5E00871057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C972FC381B672E5E00871057 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C972FC3B1B672E5E00871057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		C972FC411B672E5E00871057 /* Asteroid QuestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Asteroid QuestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C972FC461B672E5E00871057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C972FC471B672E5E00871057 /* Asteroid_QuestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Asteroid_QuestTests.m; sourceTree = "<group>"; };
 		C975AD7F1B67305600219585 /* Bitmasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bitmasks.h; sourceTree = "<group>"; };
 		C975AD801B67305600219585 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		C975AD811B67305600219585 /* Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
@@ -145,18 +130,12 @@
 		C975ADE31B673A0A00219585 /* Brown-Bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Brown-Bullet.png"; path = "../../Downloads/Brown-Bullet.png"; sourceTree = "<group>"; };
 		C98373F31B6DE80D0077B9CA /* Spaceship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spaceship.h; sourceTree = "<group>"; };
 		C98373F71B6DE8760077B9CA /* Spaceship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spaceship.m; sourceTree = "<group>"; };
+		C9B83D761B8018D700D20DA3 /* stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = stars.sks; sourceTree = "<group>"; };
 		C9DBAB131B781DE200C1DA73 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sound; path = ../../Downloads/Sound; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C972FC201B672E5E00871057 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C972FC3E1B672E5E00871057 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -173,7 +152,6 @@
 				C975ADCC1B6737D100219585 /* Backgrounds */,
 				C975ADCB1B67378C00219585 /* Images */,
 				C972FC251B672E5E00871057 /* Asteroid Quest */,
-				C972FC441B672E5E00871057 /* Asteroid QuestTests */,
 				C972FC241B672E5E00871057 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -182,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				C972FC231B672E5E00871057 /* Asteroid Quest.app */,
-				C972FC411B672E5E00871057 /* Asteroid QuestTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,13 +188,13 @@
 				C972FC2B1B672E5E00871057 /* AppDelegate.m */,
 				C972FC2D1B672E5E00871057 /* SpaceScene.h */,
 				C972FC2E1B672E5E00871057 /* SpaceScene.m */,
-				C972FC301B672E5E00871057 /* SpaceScene.sks */,
 				C972FC321B672E5E00871057 /* GameViewController.h */,
 				C972FC331B672E5E00871057 /* GameViewController.m */,
 				C972FC351B672E5E00871057 /* Main.storyboard */,
 				C972FC3A1B672E5E00871057 /* LaunchScreen.xib */,
 				C972FC381B672E5E00871057 /* Images.xcassets */,
 				C972FC261B672E5E00871057 /* Supporting Files */,
+				C9B83D761B8018D700D20DA3 /* stars.sks */,
 			);
 			path = "Asteroid Quest";
 			sourceTree = "<group>";
@@ -227,23 +204,6 @@
 			children = (
 				C972FC271B672E5E00871057 /* Info.plist */,
 				C972FC281B672E5E00871057 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C972FC441B672E5E00871057 /* Asteroid QuestTests */ = {
-			isa = PBXGroup;
-			children = (
-				C972FC471B672E5E00871057 /* Asteroid_QuestTests.m */,
-				C972FC451B672E5E00871057 /* Supporting Files */,
-			);
-			path = "Asteroid QuestTests";
-			sourceTree = "<group>";
-		};
-		C972FC451B672E5E00871057 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				C972FC461B672E5E00871057 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -319,24 +279,6 @@
 			productReference = C972FC231B672E5E00871057 /* Asteroid Quest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C972FC401B672E5E00871057 /* Asteroid QuestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C972FC4E1B672E5E00871057 /* Build configuration list for PBXNativeTarget "Asteroid QuestTests" */;
-			buildPhases = (
-				C972FC3D1B672E5E00871057 /* Sources */,
-				C972FC3E1B672E5E00871057 /* Frameworks */,
-				C972FC3F1B672E5E00871057 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C972FC431B672E5E00871057 /* PBXTargetDependency */,
-			);
-			name = "Asteroid QuestTests";
-			productName = "Asteroid QuestTests";
-			productReference = C972FC411B672E5E00871057 /* Asteroid QuestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -348,10 +290,6 @@
 				TargetAttributes = {
 					C972FC221B672E5E00871057 = {
 						CreatedOnToolsVersion = 6.3.2;
-					};
-					C972FC401B672E5E00871057 = {
-						CreatedOnToolsVersion = 6.3.2;
-						TestTargetID = C972FC221B672E5E00871057;
 					};
 				};
 			};
@@ -369,7 +307,6 @@
 			projectRoot = "";
 			targets = (
 				C972FC221B672E5E00871057 /* Asteroid Quest */,
-				C972FC401B672E5E00871057 /* Asteroid QuestTests */,
 			);
 		};
 /* End PBXProject section */
@@ -392,6 +329,7 @@
 				C975ADAE1B67378700219585 /* asteroid1.1.png in Resources */,
 				C975ADB51B67378700219585 /* asteroid2.4.png in Resources */,
 				C975ADB61B67378700219585 /* asteroid3.1.png in Resources */,
+				C9B83D781B8018D700D20DA3 /* stars.sks in Resources */,
 				C975ADC61B67378700219585 /* explosion9.png in Resources */,
 				C975ADE41B673A0A00219585 /* Brown-Bullet.png in Resources */,
 				C975ADBA1B67378700219585 /* asteroid4.1.png in Resources */,
@@ -409,7 +347,6 @@
 				C975ADD41B6737E100219585 /* bg_planetsunrise.png in Resources */,
 				C975ADC21B67378700219585 /* explosion5.png in Resources */,
 				C975ADB11B67378700219585 /* asteroid1.4.png in Resources */,
-				C972FC311B672E5E00871057 /* SpaceScene.sks in Resources */,
 				C975ADCA1B67378700219585 /* explosion13.png in Resources */,
 				C975ADB21B67378700219585 /* asteroid2.1.png in Resources */,
 				C975ADB31B67378700219585 /* asteroid2.2.png in Resources */,
@@ -421,13 +358,6 @@
 				C975ADC01B67378700219585 /* explosion3.png in Resources */,
 				C975ADB01B67378700219585 /* asteroid1.3.png in Resources */,
 				C975ADBE1B67378700219585 /* explosion1.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C972FC3F1B672E5E00871057 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,23 +383,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C972FC3D1B672E5E00871057 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C972FC481B672E5E00871057 /* Asteroid_QuestTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C972FC431B672E5E00871057 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C972FC221B672E5E00871057 /* Asteroid Quest */;
-			targetProxy = C972FC421B672E5E00871057 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C972FC351B672E5E00871057 /* Main.storyboard */ = {
@@ -575,9 +489,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Asteroid Quest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -585,43 +502,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Asteroid Quest/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		C972FC4F1B672E5E00871057 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Asteroid QuestTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroid Quest.app/Asteroid Quest";
-			};
-			name = Debug;
-		};
-		C972FC501B672E5E00871057 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Asteroid QuestTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Asteroid Quest.app/Asteroid Quest";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -642,15 +528,6 @@
 			buildConfigurations = (
 				C972FC4C1B672E5E00871057 /* Debug */,
 				C972FC4D1B672E5E00871057 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C972FC4E1B672E5E00871057 /* Build configuration list for PBXNativeTarget "Asteroid QuestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C972FC4F1B672E5E00871057 /* Debug */,
-				C972FC501B672E5E00871057 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -10,10 +10,7 @@
 #import "Math.h"
 #import "Bitmasks.h"
 
-
 @implementation Asteroid
-
-
 
 - (id)initWithType: (int) type
 {

@@ -18,9 +18,6 @@
 
     if (self == [super init]){
         
-        // Init audio.
-        [[SoundManager sharedManager] prepareToPlayWithSound:@"energy.caf"];
-        
         SKTexture * spaceshipTexture = [SKTexture textureWithImageNamed:@"Spaceship!.png"];
         spaceshipTexture.filteringMode = SKTextureFilteringNearest;
         
@@ -34,9 +31,6 @@
 
 -(void) startPlaying
 {
-   
- 
-  
    
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
     self.physicsBody.dynamic = YES;

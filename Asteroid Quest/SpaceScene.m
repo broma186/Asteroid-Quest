@@ -71,7 +71,16 @@ static bool destroyed = NO;
     }
     
 }
-
+/*
+- (SKEmitterNode*) starFieldEmitterWithColour: (SKColor*)colour starSpeedY: (CGFloat) starSpeedY starsPerSecond: (CGFloat) starsPerSecond starScaleFactor: (CGFloat) starScaleFactor{
+    
+    // Determine the time a star is visible on screen.
+    CGFloat lifetime =  self.frame.size.height * [UIScreen mainScreen].scale / starSpeedY;
+    
+    SKEmitterNode* emitterNode = SKEmitterNode();
+    return 2;
+}
+*/
 
 -(void) createBackground
 {
@@ -191,8 +200,6 @@ static bool destroyed = NO;
             if([self.delegate respondsToSelector:@selector(gamePlay)]){
                 [self.delegate gamePlay];
             }
-            
-        
             
             // Make the asteroids move.
             generateAsteroids = [SKAction performSelector:@selector(createAsteroids) onTarget:self];
