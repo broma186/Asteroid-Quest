@@ -14,6 +14,6 @@
 
 @interface GameViewController : UIViewController<SceneDelegate>
 
-@property (nonatomic) ParallaxBackgroundDirection direction;
+
 
 @end

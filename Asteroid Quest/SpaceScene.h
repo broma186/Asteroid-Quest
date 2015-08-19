@@ -7,7 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "ParallaxScrolling.h"
+
 
 
 @protocol SceneDelegate <NSObject>
@@ -19,7 +19,6 @@
 @interface SpaceScene : SKScene<SKPhysicsContactDelegate>
 
 @property (unsafe_unretained,nonatomic) id<SceneDelegate> delegate;
-@property (nonatomic) ParallaxBackgroundDirection direction;
 @property (nonatomic) NSInteger score;
 
 - (void) startGame;

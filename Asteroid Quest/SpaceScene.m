@@ -18,12 +18,6 @@
 
 
 
-@interface SpaceScene ()
-
-@property (nonatomic, strong) ParallaxScrolling * parallaxBackground;
-
-
-@end
 
 
 @implementation SpaceScene {
@@ -71,30 +65,56 @@ static bool destroyed = NO;
     }
     
 }
-/*
-- (SKEmitterNode*) starFieldEmitterWithColour: (SKColor*)colour starSpeedY: (CGFloat) starSpeedY starsPerSecond: (CGFloat) starsPerSecond starScaleFactor: (CGFloat) starScaleFactor{
+
+
+-(SKEmitterNode*) starFieldEmitterWithPath:(NSString*)path  starSpeedY:(CGFloat)starSpeedY starsPerSecond:(CGFloat)starsPerSecond starScaleFactor:(CGFloat)starScaleFactor {
+    
+     SKEmitterNode *starField =  [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:path ofType:@"sks"]];
+    
     
     // Determine the time a star is visible on screen.
     CGFloat lifetime =  self.frame.size.height * [UIScreen mainScreen].scale / starSpeedY;
     
-    SKEmitterNode* emitterNode = SKEmitterNode();
-    return 2;
+    [starField setPosition: CGPointMake(self.frame.size.width / 2,self.frame.size.height)];
+    [starField setName:@"starField"];
+    [starField setParticleBirthRate: starsPerSecond];
+
+    [starField setParticleSpeed: starSpeedY];
+    [starField setParticleScale: starScaleFactor];
+    [starField setParticlePositionRange: CGVectorMake(self.frame.size.width, self.frame.size.height)];
+    [starField setParticleLifetime: lifetime];
+    
+    
+    /* Fast forward the effect to start with a filled screen.
+       The time interval will allow the stars to jump forward and
+      fill the screen with stars immediately.*/
+
+    NSTimeInterval interval = lifetime;
+    [starField advanceSimulationTime: interval];
+    
+    return starField;
 }
-*/
 
 -(void) createBackground
 {
-    // Set parallax scrolling background.
+
+    self.backgroundColor = [SKColor blackColor];
     
-    self.direction = _direction;
+    SKEmitterNode *starField1 = [self starFieldEmitterWithPath:@"starField1"  starSpeedY:50 starsPerSecond:1 starScaleFactor:0.2];
+    starField1.zPosition = -10;
+    [self addChild:starField1];
     
-    NSArray * imageNames = @[@"bg_front_spacedust",@"bg_planetsunrise", @"bg_galaxy"];
+    SKEmitterNode *starField2 = [self starFieldEmitterWithPath:@"starField2"  starSpeedY:30 starsPerSecond:2 starScaleFactor:0.1];
+    starField2.zPosition = -11;
+    [self addChild:starField2];
     
+    SKEmitterNode *starField3 = [self starFieldEmitterWithPath:@"starField3"  starSpeedY:15 starsPerSecond:4 starScaleFactor:0.05];
+    starField3.zPosition = -12;
+    [self addChild:starField3];
     
-    ParallaxScrolling *parallax = [[ParallaxScrolling alloc] initWithBackgrounds:imageNames size:self.size direction:kParallaxBackgroundDirectionDown fastestSpeed:kParallaxBackgroundDefaultSpeed andSpeedDecrease:kParallaxBackgroundDefaultSpeedDifferential];
+   
     
-    self.parallaxBackground = parallax;
-    [self addChild:parallax];
+  
 }
 
 
@@ -419,9 +439,6 @@ static bool destroyed = NO;
 # pragma mark - Update scene contents.
 
 -(void)update:(CFTimeInterval)currentTime {
-    
-    [self.parallaxBackground update:currentTime];
-    
     
 }
 

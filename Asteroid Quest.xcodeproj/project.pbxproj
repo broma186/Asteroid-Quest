@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C93C33021B673D3C00A13973 /* Intel.m in Sources */ = {isa = PBXBuildFile; fileRef = C93C33011B673D3C00A13973 /* Intel.m */; };
 		C94A58C91B741B22006DCAC0 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C94A58C81B741B22006DCAC0 /* SoundManager.m */; };
+		C9646A751B82E195001375C5 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = C9646A731B82E195001375C5 /* spark.png */; };
+		C9646A771B82E75C001375C5 /* starField1.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9646A761B82E75C001375C5 /* starField1.sks */; };
 		C972FC291B672E5E00871057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC281B672E5E00871057 /* main.m */; };
 		C972FC2C1B672E5E00871057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2B1B672E5E00871057 /* AppDelegate.m */; };
 		C972FC2F1B672E5E00871057 /* SpaceScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2E1B672E5E00871057 /* SpaceScene.m */; };
@@ -17,7 +19,6 @@
 		C972FC391B672E5E00871057 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C972FC381B672E5E00871057 /* Images.xcassets */; };
 		C972FC3C1B672E5E00871057 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C972FC3A1B672E5E00871057 /* LaunchScreen.xib */; };
 		C975AD841B67305600219585 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = C975AD811B67305600219585 /* Math.m */; };
-		C975AD851B67305600219585 /* ParallaxScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = C975AD831B67305600219585 /* ParallaxScrolling.m */; };
 		C975AD8C1B67306800219585 /* Score.m in Sources */ = {isa = PBXBuildFile; fileRef = C975AD871B67306800219585 /* Score.m */; };
 		C975AD8D1B67306800219585 /* Asteroid.m in Sources */ = {isa = PBXBuildFile; fileRef = C975AD891B67306800219585 /* Asteroid.m */; };
 		C975AD8E1B67306800219585 /* Explosion.m in Sources */ = {isa = PBXBuildFile; fileRef = C975AD8B1B67306800219585 /* Explosion.m */; };
@@ -59,8 +60,9 @@
 		C975ADE21B6739A900219585 /* Spaceship!.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE11B6739A900219585 /* Spaceship!.png */; };
 		C975ADE41B673A0A00219585 /* Brown-Bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE31B673A0A00219585 /* Brown-Bullet.png */; };
 		C98373F81B6DE8760077B9CA /* Spaceship.m in Sources */ = {isa = PBXBuildFile; fileRef = C98373F71B6DE8760077B9CA /* Spaceship.m */; };
-		C9B83D781B8018D700D20DA3 /* stars.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9B83D761B8018D700D20DA3 /* stars.sks */; };
 		C9DBAB141B781DE200C1DA73 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = C9DBAB131B781DE200C1DA73 /* Sound */; };
+		C9EF659B1B840F2400DD5D38 /* starField2.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9EF659A1B840F2400DD5D38 /* starField2.sks */; };
+		C9EF659D1B840F3F00DD5D38 /* starField3.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9EF659C1B840F3F00DD5D38 /* starField3.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		C93C33031B673D5000A13973 /* Intel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Intel.h; sourceTree = "<group>"; };
 		C94A58C71B741B22006DCAC0 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = "../../Tappy-Plane-master/Tappy Plane/SoundManager.h"; sourceTree = "<group>"; };
 		C94A58C81B741B22006DCAC0 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = "../../Tappy-Plane-master/Tappy Plane/SoundManager.m"; sourceTree = "<group>"; };
+		C9646A731B82E195001375C5 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		C9646A761B82E75C001375C5 /* starField1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starField1.sks; sourceTree = "<group>"; };
 		C972FC231B672E5E00871057 /* Asteroid Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asteroid Quest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C972FC271B672E5E00871057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C972FC281B672E5E00871057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -83,8 +87,6 @@
 		C975AD7F1B67305600219585 /* Bitmasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bitmasks.h; sourceTree = "<group>"; };
 		C975AD801B67305600219585 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		C975AD811B67305600219585 /* Math.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Math.m; sourceTree = "<group>"; };
-		C975AD821B67305600219585 /* ParallaxScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxScrolling.h; sourceTree = "<group>"; };
-		C975AD831B67305600219585 /* ParallaxScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxScrolling.m; sourceTree = "<group>"; };
 		C975AD861B67306800219585 /* Score.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
 		C975AD871B67306800219585 /* Score.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Score.m; sourceTree = "<group>"; };
 		C975AD881B67306800219585 /* Asteroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asteroid.h; sourceTree = "<group>"; };
@@ -130,8 +132,9 @@
 		C975ADE31B673A0A00219585 /* Brown-Bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Brown-Bullet.png"; path = "../../Downloads/Brown-Bullet.png"; sourceTree = "<group>"; };
 		C98373F31B6DE80D0077B9CA /* Spaceship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spaceship.h; sourceTree = "<group>"; };
 		C98373F71B6DE8760077B9CA /* Spaceship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spaceship.m; sourceTree = "<group>"; };
-		C9B83D761B8018D700D20DA3 /* stars.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = stars.sks; sourceTree = "<group>"; };
 		C9DBAB131B781DE200C1DA73 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sound; path = ../../Downloads/Sound; sourceTree = "<group>"; };
+		C9EF659A1B840F2400DD5D38 /* starField2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starField2.sks; sourceTree = "<group>"; };
+		C9EF659C1B840F3F00DD5D38 /* starField3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starField3.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,19 +185,20 @@
 				C975AD7F1B67305600219585 /* Bitmasks.h */,
 				C975AD801B67305600219585 /* Math.h */,
 				C975AD811B67305600219585 /* Math.m */,
-				C975AD821B67305600219585 /* ParallaxScrolling.h */,
-				C975AD831B67305600219585 /* ParallaxScrolling.m */,
 				C972FC2A1B672E5E00871057 /* AppDelegate.h */,
 				C972FC2B1B672E5E00871057 /* AppDelegate.m */,
+				C9646A761B82E75C001375C5 /* starField1.sks */,
+				C9EF659A1B840F2400DD5D38 /* starField2.sks */,
+				C9EF659C1B840F3F00DD5D38 /* starField3.sks */,
 				C972FC2D1B672E5E00871057 /* SpaceScene.h */,
 				C972FC2E1B672E5E00871057 /* SpaceScene.m */,
 				C972FC321B672E5E00871057 /* GameViewController.h */,
 				C972FC331B672E5E00871057 /* GameViewController.m */,
+				C9646A731B82E195001375C5 /* spark.png */,
 				C972FC351B672E5E00871057 /* Main.storyboard */,
 				C972FC3A1B672E5E00871057 /* LaunchScreen.xib */,
 				C972FC381B672E5E00871057 /* Images.xcassets */,
 				C972FC261B672E5E00871057 /* Supporting Files */,
-				C9B83D761B8018D700D20DA3 /* stars.sks */,
 			);
 			path = "Asteroid Quest";
 			sourceTree = "<group>";
@@ -285,7 +289,8 @@
 		C972FC1B1B672E5E00871057 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Matthew Brooker";
 				TargetAttributes = {
 					C972FC221B672E5E00871057 = {
@@ -317,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C975ADC31B67378700219585 /* explosion6.png in Resources */,
+				C9646A771B82E75C001375C5 /* starField1.sks in Resources */,
 				C975ADD21B6737E100219585 /* bg_front_spacedust.png in Resources */,
 				C975ADB71B67378700219585 /* asteroid3.2.png in Resources */,
 				C975ADC71B67378700219585 /* explosion10.png in Resources */,
@@ -329,7 +335,6 @@
 				C975ADAE1B67378700219585 /* asteroid1.1.png in Resources */,
 				C975ADB51B67378700219585 /* asteroid2.4.png in Resources */,
 				C975ADB61B67378700219585 /* asteroid3.1.png in Resources */,
-				C9B83D781B8018D700D20DA3 /* stars.sks in Resources */,
 				C975ADC61B67378700219585 /* explosion9.png in Resources */,
 				C975ADE41B673A0A00219585 /* Brown-Bullet.png in Resources */,
 				C975ADBA1B67378700219585 /* asteroid4.1.png in Resources */,
@@ -341,10 +346,13 @@
 				C972FC3C1B672E5E00871057 /* LaunchScreen.xib in Resources */,
 				C972FC391B672E5E00871057 /* Images.xcassets in Resources */,
 				C975ADBC1B67378700219585 /* asteroid4.3.png in Resources */,
+				C9EF659B1B840F2400DD5D38 /* starField2.sks in Resources */,
 				C975ADD51B6737E100219585 /* bg_spacialanomaly.png in Resources */,
 				C975ADBF1B67378700219585 /* explosion2.png in Resources */,
+				C9646A751B82E195001375C5 /* spark.png in Resources */,
 				C975ADB41B67378700219585 /* asteroid2.3.png in Resources */,
 				C975ADD41B6737E100219585 /* bg_planetsunrise.png in Resources */,
+				C9EF659D1B840F3F00DD5D38 /* starField3.sks in Resources */,
 				C975ADC21B67378700219585 /* explosion5.png in Resources */,
 				C975ADB11B67378700219585 /* asteroid1.4.png in Resources */,
 				C975ADCA1B67378700219585 /* explosion13.png in Resources */,
@@ -370,7 +378,6 @@
 			files = (
 				C975AD8D1B67306800219585 /* Asteroid.m in Sources */,
 				C98373F81B6DE8760077B9CA /* Spaceship.m in Sources */,
-				C975AD851B67305600219585 /* ParallaxScrolling.m in Sources */,
 				C975AD841B67305600219585 /* Math.m in Sources */,
 				C972FC341B672E5E00871057 /* GameViewController.m in Sources */,
 				C975AD8E1B67306800219585 /* Explosion.m in Sources */,
@@ -426,6 +433,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -489,11 +497,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Asteroid Quest/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MB.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Asteroid Quest/Asteroid Quest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -502,11 +515,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = "Asteroid Quest/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "MB.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Asteroid Quest/Asteroid Quest-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
