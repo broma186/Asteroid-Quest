@@ -60,6 +60,8 @@
 		C975ADE21B6739A900219585 /* Spaceship!.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE11B6739A900219585 /* Spaceship!.png */; };
 		C975ADE41B673A0A00219585 /* Brown-Bullet.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE31B673A0A00219585 /* Brown-Bullet.png */; };
 		C98373F81B6DE8760077B9CA /* Spaceship.m in Sources */ = {isa = PBXBuildFile; fileRef = C98373F71B6DE8760077B9CA /* Spaceship.m */; };
+		C9C4380D1B8578E200DB5729 /* destroyedView.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C4380B1B8578E200DB5729 /* destroyedView.png */; };
+		C9C4380E1B8578E200DB5729 /* startGameView.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C4380C1B8578E200DB5729 /* startGameView.png */; };
 		C9DBAB141B781DE200C1DA73 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = C9DBAB131B781DE200C1DA73 /* Sound */; };
 		C9EF659B1B840F2400DD5D38 /* starField2.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9EF659A1B840F2400DD5D38 /* starField2.sks */; };
 		C9EF659D1B840F3F00DD5D38 /* starField3.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9EF659C1B840F3F00DD5D38 /* starField3.sks */; };
@@ -132,6 +134,8 @@
 		C975ADE31B673A0A00219585 /* Brown-Bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Brown-Bullet.png"; path = "../../Downloads/Brown-Bullet.png"; sourceTree = "<group>"; };
 		C98373F31B6DE80D0077B9CA /* Spaceship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spaceship.h; sourceTree = "<group>"; };
 		C98373F71B6DE8760077B9CA /* Spaceship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spaceship.m; sourceTree = "<group>"; };
+		C9C4380B1B8578E200DB5729 /* destroyedView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = destroyedView.png; path = "Asteroid Quest Images/destroyedView.png"; sourceTree = "<group>"; };
+		C9C4380C1B8578E200DB5729 /* startGameView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startGameView.png; path = "Asteroid Quest Images/startGameView.png"; sourceTree = "<group>"; };
 		C9DBAB131B781DE200C1DA73 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sound; path = ../../Downloads/Sound; sourceTree = "<group>"; };
 		C9EF659A1B840F2400DD5D38 /* starField2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starField2.sks; sourceTree = "<group>"; };
 		C9EF659C1B840F3F00DD5D38 /* starField3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starField3.sks; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 		C975ADCB1B67378C00219585 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				C9C4380B1B8578E200DB5729 /* destroyedView.png */,
+				C9C4380C1B8578E200DB5729 /* startGameView.png */,
 				C975ADE31B673A0A00219585 /* Brown-Bullet.png */,
 				C975ADE11B6739A900219585 /* Spaceship!.png */,
 				C975ADDF1B67397800219585 /* intel.png */,
@@ -357,12 +363,14 @@
 				C975ADB11B67378700219585 /* asteroid1.4.png in Resources */,
 				C975ADCA1B67378700219585 /* explosion13.png in Resources */,
 				C975ADB21B67378700219585 /* asteroid2.1.png in Resources */,
+				C9C4380E1B8578E200DB5729 /* startGameView.png in Resources */,
 				C975ADB31B67378700219585 /* asteroid2.2.png in Resources */,
 				C975ADBB1B67378700219585 /* asteroid4.2.png in Resources */,
 				C975ADAF1B67378700219585 /* asteroid1.2.png in Resources */,
 				C9DBAB141B781DE200C1DA73 /* Sound in Resources */,
 				C972FC371B672E5E00871057 /* Main.storyboard in Resources */,
 				C975ADE01B67397800219585 /* intel.png in Resources */,
+				C9C4380D1B8578E200DB5729 /* destroyedView.png in Resources */,
 				C975ADC01B67378700219585 /* explosion3.png in Resources */,
 				C975ADB01B67378700219585 /* asteroid1.3.png in Resources */,
 				C975ADBE1B67378700219585 /* explosion1.png in Resources */,
