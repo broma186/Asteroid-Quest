@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 #import "SpaceScene.h"
-
+#import "Score.h"
+#import "SoundManager.h"
+#import "DestroyedView.h"
 
 
 @interface GameViewController : UIViewController<SceneDelegate>

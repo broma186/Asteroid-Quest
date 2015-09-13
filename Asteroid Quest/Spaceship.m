@@ -18,7 +18,7 @@
 
     if (self == [super init]){
         
-        SKTexture * spaceshipTexture = [SKTexture textureWithImageNamed:@"Spaceship!.png"];
+        SKTexture *spaceshipTexture = [SKTexture textureWithImageNamed:@"Spaceship!.png"];
         spaceshipTexture.filteringMode = SKTextureFilteringNearest;
         
         self = [Spaceship spriteNodeWithTexture:spaceshipTexture];
@@ -31,8 +31,7 @@
 
 -(void) startPlaying
 {
-   
-    self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:self.size];
+    self.physicsBody = [SKPhysicsBody bodyWithTexture:self.texture size:self.size];
     self.physicsBody.dynamic = YES;
     self.physicsBody.categoryBitMask = spaceshipBitMask;
     self.physicsBody.contactTestBitMask = asteroidBitMask;

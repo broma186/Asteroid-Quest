@@ -7,19 +7,16 @@
 //
 
 #import "GameViewController.h"
-#import "SpaceScene.h"
-#import "Score.h"
-#import "SoundManager.h"
+
 
 @interface GameViewController ()
 
 @property (strong, nonatomic) IBOutlet SKView *gameView;
-@property (strong, nonatomic) IBOutlet UIView *startGameView;
-@property (strong, nonatomic) IBOutlet UILabel *startDescription;
+@property (strong, nonatomic) UIImageView *destroyedView;
+@property (strong, nonatomic) UIImageView *startGameView;
+@property (strong, nonatomic) UILabel *yourScore;
+@property (strong, nonatomic) UILabel *topScore;
 
-@property (strong, nonatomic) IBOutlet UIView *destroyedView;
-@property (strong, nonatomic) IBOutlet UILabel *yourScore;
-@property (strong, nonatomic) IBOutlet UILabel *topScore;
 
 
 @end
@@ -28,6 +25,7 @@
 {
     SpaceScene * scene;
     Sound *_spaceshipSound;
+  
 
 }
 
@@ -43,58 +41,100 @@
     scene.delegate = self;
     
     // Present the scene
-    self.destroyedView.alpha = 0;
-    self.destroyedView.transform = CGAffineTransformMakeScale(.9, .9);
+     _destroyedView.alpha = 0;
     [self.gameView presentScene:scene];
     
     # pragma mark - Sound
     
     _spaceshipSound = [Sound soundNamed:[NSString stringWithFormat:@"%@/Sound/spaceship_loop.caf", [[NSBundle mainBundle] resourcePath]]];
     _spaceshipSound.looping = YES;
- 
+    
+    // Start view
+    
+    _startGameView =  [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    [_startGameView setImage:[UIImage imageNamed:@"startGameView.png"]];
+    [_startGameView setUserInteractionEnabled:NO];
+     _startGameView.translatesAutoresizingMaskIntoConstraints = NO;
+    [_gameView addSubview: _startGameView];
+    
+    // Constraints for start game view.
+    
+    // Equal heights and width for start view, so box is the same size regardless of device.
+    [_startGameView addConstraint:[NSLayoutConstraint constraintWithItem:_startGameView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1 constant:300]];
+    [_startGameView addConstraint:[NSLayoutConstraint constraintWithItem:_startGameView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1 constant:300]];
+    
+    // Center start view in main game view.
+    [self.gameView addConstraint:[NSLayoutConstraint constraintWithItem:_startGameView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.gameView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+    
+    [self.gameView addConstraint:[NSLayoutConstraint constraintWithItem:_startGameView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.gameView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+    
+    // Game over/destroyed view.
+    _destroyedView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 300, 300)];
+    [_destroyedView setImage:[UIImage imageNamed:@"destroyedView.png"]];
+    [_destroyedView setUserInteractionEnabled:NO];
+    _destroyedView.translatesAutoresizingMaskIntoConstraints = NO;
+    [_gameView addSubview: _destroyedView];
+    _destroyedView.alpha = 0;
+    
+    // Constraints for game over view.
+    
+    // Equal heights and width for game over view, so box is the same size regardless of device.
+    [_destroyedView addConstraint:[NSLayoutConstraint constraintWithItem:_destroyedView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1 constant:300]];
+    [_destroyedView addConstraint:[NSLayoutConstraint constraintWithItem:_destroyedView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:0 multiplier:1 constant:300]];
+    
+      // Center game over view in main game view.
+    [self.gameView addConstraint:[NSLayoutConstraint constraintWithItem:_destroyedView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.gameView attribute:NSLayoutAttributeCenterY multiplier:1 constant:0]];
+    
+    [self.gameView addConstraint:[NSLayoutConstraint constraintWithItem:_destroyedView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.gameView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
+
+
+     UIFont * customFont = [UIFont fontWithName:@"Cubellan" size:22];
+
+    
+    _yourScore = [[UILabel alloc] initWithFrame: CGRectMake(_destroyedView.frame.size.width/2 + 40, _destroyedView.frame.size.height/2 - 8, 0, 0)];
+    _yourScore.text =  @"0000";
+     _yourScore.font = customFont;
+    [_yourScore sizeToFit];
+    _yourScore.backgroundColor = [UIColor clearColor];
+    _yourScore.textColor = [UIColor whiteColor];
+    _yourScore.userInteractionEnabled = NO;
+   
+    [_destroyedView addSubview:_yourScore];
+    
+   
+    
+    _topScore = [[UILabel alloc] initWithFrame:CGRectMake(_yourScore.frame.origin.x, _yourScore.frame.origin.y + 35, 0, 0)];
+     _topScore.text = @"0000";
+     _topScore.font = customFont;
+    [_topScore sizeToFit];
+    _topScore.backgroundColor = [UIColor clearColor];
+    _topScore.textColor = [UIColor whiteColor];
+    _topScore.userInteractionEnabled = NO;
+    
+    [_destroyedView addSubview:_topScore];
+    
 }
 
-/* This method is implemented to customize the start game description label
-   programmatically. */
-
-- (void) viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];
-    
-    self.startDescription.text = @"Shoot the asteroids and collect intel to score!\nAvoid the asteroids or be destroyed.\n\nShoot asteroid - 1 Point\n\nCollect intel - 2 Points";
-    
-    self.startDescription.font = [UIFont systemFontOfSize:14];
-    
-    self.startDescription.lineBreakMode = NSLineBreakByWordWrapping;
-    self.startDescription.numberOfLines = 0;
-    
-    
-}
 
 
 - (void) gameStart
 {
     [UIView animateWithDuration:.2 animations:^{
         
-        self.destroyedView.alpha = 0;
-        self.destroyedView.transform = CGAffineTransformMakeScale(.8, .8);
+        _destroyedView.alpha = 0;
+        _destroyedView.transform = CGAffineTransformMakeScale(.8, .8);
         
-        self.startGameView.alpha = 1;
-       
-    }completion:^(BOOL finished) {
-           NSLog(@"game started");
+        _startGameView.alpha = 1;
     }];
 }
 
 - (void) gamePlay
 {
-   
     [_spaceshipSound play];
     [_spaceshipSound fadeIn:1.0];
-    
-    [UIView animateWithDuration:.5 animations:^{
-        self.startGameView.alpha = 0;
    
+    [UIView animateWithDuration:.5 animations:^{
+        _startGameView.alpha = 0;
     }];
 }
 
@@ -105,14 +145,14 @@
     [_spaceshipSound fadeOut:1.0];
     
     [UIView animateWithDuration:.9 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-     self.destroyedView.alpha = 1;
-     self.destroyedView.transform = CGAffineTransformMakeScale(1, 1);
-     
-     self.yourScore.text = [NSString stringWithFormat:@"%d",(int)scene.score];
-     self.topScore.text = [NSString stringWithFormat:@"%d",(int)[Score bestScore]];
-     
+       
+     _destroyedView.alpha = 1;
+     _destroyedView.transform = CGAffineTransformMakeScale(1, 1);
+        
+    _yourScore.text = [NSString stringWithFormat:@"%d",(int)scene.score];
+    _topScore.text = [NSString stringWithFormat:@"%d",(int)[Score bestScore]];
+
     }
-     
     completion:^(BOOL finished) {
         NSLog(@"Game over menu reached");
     }];

@@ -16,10 +16,6 @@
 #import "Intel.h"
 #import "SoundManager.h"
 
-
-
-
-
 @implementation SpaceScene {
     
     Spaceship *ship;
@@ -31,12 +27,10 @@
     Sound *explosionSound;
     Sound *explosionShipSound;
     Sound *pickupSound;
-    
-   
+
 }
 
 static bool destroyed = NO;
-
 
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
@@ -97,7 +91,6 @@ static bool destroyed = NO;
 
 -(void) createBackground
 {
-
     self.backgroundColor = [SKColor blackColor];
     
     SKEmitterNode *starField1 = [self starFieldEmitterWithPath:@"starField1"  starSpeedY:50 starsPerSecond:1 starScaleFactor:0.2];
@@ -111,10 +104,6 @@ static bool destroyed = NO;
     SKEmitterNode *starField3 = [self starFieldEmitterWithPath:@"starField3"  starSpeedY:15 starsPerSecond:4 starScaleFactor:0.05];
     starField3.zPosition = -12;
     [self addChild:starField3];
-    
-   
-    
-  
 }
 
 
@@ -170,7 +159,7 @@ static bool destroyed = NO;
     // Asteroid - Laser explosion
     explosionSound = [Sound soundNamed:[NSString stringWithFormat:@"%@/Sound/explosion.caf", [[NSBundle mainBundle] resourcePath]]];
     
-    // Pickup intel sound.
+    // Pickup intel sound
     pickupSound = [Sound soundNamed:[NSString stringWithFormat:@"%@/Sound/pickup.caf", [[NSBundle mainBundle] resourcePath]]];
     
     
@@ -180,16 +169,16 @@ static bool destroyed = NO;
 
 - (SKSpriteNode *)newMissile
 {
-    SKSpriteNode *missile = [SKSpriteNode spriteNodeWithImageNamed:@"Brown-Bullet.png"];
+    SKSpriteNode *missile = [SKSpriteNode spriteNodeWithImageNamed:@"laser_beam.png"];
     
     missile.name = @"missile";
     
-    // A spaceship reference.
+    // A spaceship reference
     SKNode *spaceship = [self childNodeWithName:@"spaceship"];
     
-    [missile setScale:0.01];
+    [missile setScale:0.03];
     
-    // Position missile at end of spaceship gun.
+    // Position missile at end of spaceship gun
     missile.position = CGPointMake(spaceship.position.x, spaceship.position.y + 20);
     
     missile.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:missile.size];
@@ -214,14 +203,14 @@ static bool destroyed = NO;
         if (!ship.physicsBody) {
             
             /* started playing so add physics body to spaceship, remove ready menu,
-            and create the asteroids. */
+            and create the asteroids */
             
             [ship startPlaying];
             if([self.delegate respondsToSelector:@selector(gamePlay)]){
                 [self.delegate gamePlay];
             }
             
-            // Make the asteroids move.
+            // Make the asteroids move
             generateAsteroids = [SKAction performSelector:@selector(createAsteroids) onTarget:self];
             wait = [SKAction waitForDuration:0 withRange:2];
             [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[generateAsteroids, wait]]] withKey:@"asteroidGen"];
@@ -238,7 +227,7 @@ static bool destroyed = NO;
         CGPoint shipPos = spaceship.position;
         
         /* Distance between touchPoint and spaceship location. Needed to maintain
-        constant speed regardless of distance. */
+        constant speed regardless of distance */
         CGFloat distance = sqrtf((touchPoint.x-shipPos.x)*(touchPoint.x-shipPos.x)+
                                  (touchPoint.y-shipPos.y)*(touchPoint.y-shipPos.y));
         
@@ -249,12 +238,12 @@ static bool destroyed = NO;
         
         if([nodes containsObject:[self childNodeWithName:@"spaceship"]]){
             
-            // Touched the spaceship, so shoot missiles.
+            // Touched the spaceship, so shoot missiles
             
             SKNode *missile = [self newMissile];
             
             /* The distance between the y coordinate of the missile to the top of view.
-               Calculated to make missile animation the same speed regardless of distance.*/
+               Calculated to make missile animation the same speed regardless of distance*/
             
             CGFloat missileDistance = sqrtf((self.frame.size.height - missile.position.y)*(self.frame.size.height - missile.position.y));
             
