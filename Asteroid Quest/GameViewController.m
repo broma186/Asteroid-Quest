@@ -88,10 +88,10 @@
     [self.gameView addConstraint:[NSLayoutConstraint constraintWithItem:_destroyedView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.gameView attribute:NSLayoutAttributeCenterX multiplier:1 constant:0]];
 
 
-     UIFont * customFont = [UIFont fontWithName:@"Cubellan" size:22];
+     UIFont * customFont = [UIFont fontWithName:@"Cubellan" size:20];
 
     
-    _yourScore = [[UILabel alloc] initWithFrame: CGRectMake(_destroyedView.frame.size.width/2 + 40, _destroyedView.frame.size.height/2 - 8, 0, 0)];
+    _yourScore = [[UILabel alloc] initWithFrame: CGRectMake(_destroyedView.frame.size.width/2 + 40, _destroyedView.frame.size.height/2 - 13, 0, 0)];
     _yourScore.text =  @"0000";
      _yourScore.font = customFont;
     [_yourScore sizeToFit];
@@ -103,7 +103,7 @@
     
    
     
-    _topScore = [[UILabel alloc] initWithFrame:CGRectMake(_yourScore.frame.origin.x, _yourScore.frame.origin.y + 35, 0, 0)];
+    _topScore = [[UILabel alloc] initWithFrame:CGRectMake(_yourScore.frame.origin.x, _yourScore.frame.origin.y + 37, 0, 0)];
      _topScore.text = @"0000";
      _topScore.font = customFont;
     [_topScore sizeToFit];

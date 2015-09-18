@@ -8,6 +8,7 @@
 
 #import "Intel.h"
 #import "ParallaxScrolling.h"
+#import "Constants.h"
 
 
 @implementation Intel
@@ -21,10 +22,10 @@
         
         self = [Intel spriteNodeWithTexture:intelTexture];
         
-        [self setScale:0.05];
+        [self setScale:IMAGE_SCALE];
         
         // The intelligence pickups must move at the same speed as the scrolling background.
-        SKAction *moveIntel = [SKAction moveToY:0 duration:2];
+        SKAction *moveIntel = [SKAction moveToY:INTEL_MOVE_X duration:INTEL_MOVE_Y];
         moveIntel.speed = kParallaxBackgroundDefaultSpeed;
         
         SKAction *remove = [SKAction removeFromParent];

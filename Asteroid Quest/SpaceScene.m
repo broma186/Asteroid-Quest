@@ -15,6 +15,7 @@
 #import "Bitmasks.h"
 #import "Intel.h"
 #import "SoundManager.h"
+#import "Constants.h"
 
 @implementation SpaceScene {
     
@@ -176,16 +177,18 @@ static bool destroyed = NO;
     // A spaceship reference
     SKNode *spaceship = [self childNodeWithName:@"spaceship"];
     
-    [missile setScale:0.03];
+    [missile setScale:MISSILE_SCALE];
     
     // Position missile at end of spaceship gun
     missile.position = CGPointMake(spaceship.position.x, spaceship.position.y + 20);
     
-    missile.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:missile.size];
+    CGSize missileBodySize = CGSizeMake(3, 10);
+    
+    missile.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:missileBodySize];
     missile.physicsBody.dynamic = YES;
     missile.physicsBody.categoryBitMask = missileBitMask;
     missile.physicsBody.contactTestBitMask = asteroidBitMask;
-    missile.physicsBody.collisionBitMask = 0;
+    missile.physicsBody.collisionBitMask = COLLISION_BITMASK_ZERO;
     missile.physicsBody.usesPreciseCollisionDetection = YES;
     
     [self addChild:missile];

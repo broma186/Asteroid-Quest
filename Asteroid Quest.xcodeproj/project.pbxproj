@@ -15,12 +15,10 @@
 		C93C33021B673D3C00A13973 /* Intel.m in Sources */ = {isa = PBXBuildFile; fileRef = C93C33011B673D3C00A13973 /* Intel.m */; };
 		C94A58C91B741B22006DCAC0 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C94A58C81B741B22006DCAC0 /* SoundManager.m */; };
 		C9646A771B82E75C001375C5 /* starField1.sks in Resources */ = {isa = PBXBuildFile; fileRef = C9646A761B82E75C001375C5 /* starField1.sks */; };
-		C96BC01A1B88327E0001429E /* DestroyedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C96BC0191B88327E0001429E /* DestroyedView.m */; };
 		C972FC291B672E5E00871057 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC281B672E5E00871057 /* main.m */; };
 		C972FC2C1B672E5E00871057 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2B1B672E5E00871057 /* AppDelegate.m */; };
 		C972FC2F1B672E5E00871057 /* SpaceScene.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC2E1B672E5E00871057 /* SpaceScene.m */; };
 		C972FC341B672E5E00871057 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C972FC331B672E5E00871057 /* GameViewController.m */; };
-		C972FC371B672E5E00871057 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C972FC351B672E5E00871057 /* Main.storyboard */; };
 		C972FC391B672E5E00871057 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C972FC381B672E5E00871057 /* Images.xcassets */; };
 		C972FC3C1B672E5E00871057 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C972FC3A1B672E5E00871057 /* LaunchScreen.xib */; };
 		C975AD841B67305600219585 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = C975AD811B67305600219585 /* Math.m */; };
@@ -56,14 +54,11 @@
 		C975ADC81B67378700219585 /* explosion11.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADAA1B67378700219585 /* explosion11.png */; };
 		C975ADC91B67378700219585 /* explosion12.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADAB1B67378700219585 /* explosion12.png */; };
 		C975ADCA1B67378700219585 /* explosion13.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADAC1B67378700219585 /* explosion13.png */; };
-		C975ADD21B6737E100219585 /* bg_front_spacedust.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADCD1B6737E100219585 /* bg_front_spacedust.png */; };
-		C975ADD31B6737E100219585 /* bg_galaxy.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADCE1B6737E100219585 /* bg_galaxy.png */; };
-		C975ADD41B6737E100219585 /* bg_planetsunrise.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADCF1B6737E100219585 /* bg_planetsunrise.png */; };
-		C975ADD51B6737E100219585 /* bg_spacialanomaly.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADD01B6737E100219585 /* bg_spacialanomaly.png */; };
-		C975ADD61B6737E100219585 /* bg_spacialanomaly2.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADD11B6737E100219585 /* bg_spacialanomaly2.png */; };
 		C975ADE01B67397800219585 /* intel.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADDF1B67397800219585 /* intel.png */; };
 		C975ADE21B6739A900219585 /* Spaceship!.png in Resources */ = {isa = PBXBuildFile; fileRef = C975ADE11B6739A900219585 /* Spaceship!.png */; };
 		C98373F81B6DE8760077B9CA /* Spaceship.m in Sources */ = {isa = PBXBuildFile; fileRef = C98373F71B6DE8760077B9CA /* Spaceship.m */; };
+		C992D8611BABC89A003F5753 /* space.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C992D85F1BABC89A003F5753 /* space.jpg */; settings = {ASSET_TAGS = (); }; };
+		C992D8621BABC89A003F5753 /* Starhubble.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C992D8601BABC89A003F5753 /* Starhubble.jpg */; settings = {ASSET_TAGS = (); }; };
 		C9C4380D1B8578E200DB5729 /* destroyedView.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C4380B1B8578E200DB5729 /* destroyedView.png */; };
 		C9C4380E1B8578E200DB5729 /* startGameView.png in Resources */ = {isa = PBXBuildFile; fileRef = C9C4380C1B8578E200DB5729 /* startGameView.png */; };
 		C9DBAB141B781DE200C1DA73 /* Sound in Resources */ = {isa = PBXBuildFile; fileRef = C9DBAB131B781DE200C1DA73 /* Sound */; };
@@ -83,8 +78,6 @@
 		C94A58C71B741B22006DCAC0 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundManager.h; path = "../../Tappy-Plane-master/Tappy Plane/SoundManager.h"; sourceTree = "<group>"; };
 		C94A58C81B741B22006DCAC0 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundManager.m; path = "../../Tappy-Plane-master/Tappy Plane/SoundManager.m"; sourceTree = "<group>"; };
 		C9646A761B82E75C001375C5 /* starField1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = starField1.sks; sourceTree = "<group>"; };
-		C96BC0181B8832530001429E /* DestroyedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DestroyedView.h; sourceTree = "<group>"; };
-		C96BC0191B88327E0001429E /* DestroyedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestroyedView.m; sourceTree = "<group>"; };
 		C972FC231B672E5E00871057 /* Asteroid Quest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Asteroid Quest.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C972FC271B672E5E00871057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C972FC281B672E5E00871057 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -94,7 +87,6 @@
 		C972FC2E1B672E5E00871057 /* SpaceScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceScene.m; sourceTree = "<group>"; };
 		C972FC321B672E5E00871057 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		C972FC331B672E5E00871057 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
-		C972FC361B672E5E00871057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C972FC381B672E5E00871057 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C972FC3B1B672E5E00871057 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C975AD7F1B67305600219585 /* Bitmasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bitmasks.h; sourceTree = "<group>"; };
@@ -135,15 +127,12 @@
 		C975ADAA1B67378700219585 /* explosion11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = explosion11.png; path = "../../Downloads/SpaceMission-iOS-master/SpaceMission/Graphics.atlas/explosion11.png"; sourceTree = "<group>"; };
 		C975ADAB1B67378700219585 /* explosion12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = explosion12.png; path = "../../Downloads/SpaceMission-iOS-master/SpaceMission/Graphics.atlas/explosion12.png"; sourceTree = "<group>"; };
 		C975ADAC1B67378700219585 /* explosion13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = explosion13.png; path = "../../Downloads/SpaceMission-iOS-master/SpaceMission/Graphics.atlas/explosion13.png"; sourceTree = "<group>"; };
-		C975ADCD1B6737E100219585 /* bg_front_spacedust.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_front_spacedust.png; path = "../../Downloads/SpaceMission-iOS-master/SpaceMission/Resources/Backgrounds/bg_front_spacedust.png"; sourceTree = "<group>"; };
-		C975ADCE1B6737E100219585 /* bg_galaxy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_galaxy.png; path = "../../Downloads/SpaceMission-iOS-master/SpaceMission/Resources/Backgrounds/bg_galaxy.png"; sourceTree = "<group>"; };
-		C975ADCF1B6737E100219585 /* bg_planetsunrise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_planetsunrise.png; path = "../../Downloads/SpaceMission-iOS-master/SpaceMission/Resources/Backgrounds/bg_planetsunrise.png"; sourceTree = "<group>"; };
-		C975ADD01B6737E100219585 /* bg_spacialanomaly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_spacialanomaly.png; path = "../../Downloads/SpaceMission-iOS-master/SpaceMission/Resources/Backgrounds/bg_spacialanomaly.png"; sourceTree = "<group>"; };
-		C975ADD11B6737E100219585 /* bg_spacialanomaly2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_spacialanomaly2.png; path = "../../Downloads/SpaceMission-iOS-master/SpaceMission/Resources/Backgrounds/bg_spacialanomaly2.png"; sourceTree = "<group>"; };
 		C975ADDF1B67397800219585 /* intel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = intel.png; path = ../SpaceFlight/Readyforgame/intel.png; sourceTree = "<group>"; };
 		C975ADE11B6739A900219585 /* Spaceship!.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Spaceship!.png"; path = "../SpaceFlight/Readyforgame/Spaceship!.png"; sourceTree = "<group>"; };
 		C98373F31B6DE80D0077B9CA /* Spaceship.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Spaceship.h; sourceTree = "<group>"; };
 		C98373F71B6DE8760077B9CA /* Spaceship.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Spaceship.m; sourceTree = "<group>"; };
+		C992D85F1BABC89A003F5753 /* space.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = space.jpg; path = "Asteroid Quest Images/space.jpg"; sourceTree = "<group>"; };
+		C992D8601BABC89A003F5753 /* Starhubble.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Starhubble.jpg; path = "Asteroid Quest Images/Starhubble.jpg"; sourceTree = "<group>"; };
 		C9C4380B1B8578E200DB5729 /* destroyedView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = destroyedView.png; path = "Asteroid Quest Images/destroyedView.png"; sourceTree = "<group>"; };
 		C9C4380C1B8578E200DB5729 /* startGameView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startGameView.png; path = "Asteroid Quest Images/startGameView.png"; sourceTree = "<group>"; };
 		C9DBAB131B781DE200C1DA73 /* Sound */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Sound; path = ../../Downloads/Sound; sourceTree = "<group>"; };
@@ -186,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				C90EAD0D1BA54B500056DBF1 /* Constants.h */,
+				C975AD7F1B67305600219585 /* Bitmasks.h */,
 				C94A58C71B741B22006DCAC0 /* SoundManager.h */,
 				C94A58C81B741B22006DCAC0 /* SoundManager.m */,
 				C975AD861B67306800219585 /* Score.h */,
@@ -198,7 +188,6 @@
 				C975AD8B1B67306800219585 /* Explosion.m */,
 				C98373F31B6DE80D0077B9CA /* Spaceship.h */,
 				C98373F71B6DE8760077B9CA /* Spaceship.m */,
-				C975AD7F1B67305600219585 /* Bitmasks.h */,
 				C975AD801B67305600219585 /* Math.h */,
 				C975AD811B67305600219585 /* Math.m */,
 				C972FC2A1B672E5E00871057 /* AppDelegate.h */,
@@ -208,11 +197,8 @@
 				C9EF659C1B840F3F00DD5D38 /* starField3.sks */,
 				C972FC2D1B672E5E00871057 /* SpaceScene.h */,
 				C972FC2E1B672E5E00871057 /* SpaceScene.m */,
-				C96BC0181B8832530001429E /* DestroyedView.h */,
-				C96BC0191B88327E0001429E /* DestroyedView.m */,
 				C972FC321B672E5E00871057 /* GameViewController.h */,
 				C972FC331B672E5E00871057 /* GameViewController.m */,
-				C972FC351B672E5E00871057 /* Main.storyboard */,
 				C972FC3A1B672E5E00871057 /* LaunchScreen.xib */,
 				C972FC381B672E5E00871057 /* Images.xcassets */,
 				C972FC261B672E5E00871057 /* Supporting Files */,
@@ -273,11 +259,8 @@
 		C975ADCC1B6737D100219585 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
-				C975ADCD1B6737E100219585 /* bg_front_spacedust.png */,
-				C975ADCE1B6737E100219585 /* bg_galaxy.png */,
-				C975ADCF1B6737E100219585 /* bg_planetsunrise.png */,
-				C975ADD01B6737E100219585 /* bg_spacialanomaly.png */,
-				C975ADD11B6737E100219585 /* bg_spacialanomaly2.png */,
+				C992D85F1BABC89A003F5753 /* space.jpg */,
+				C992D8601BABC89A003F5753 /* Starhubble.jpg */,
 			);
 			name = Backgrounds;
 			sourceTree = "<group>";
@@ -354,14 +337,11 @@
 				C975ADC31B67378700219585 /* explosion6.png in Resources */,
 				C9646A771B82E75C001375C5 /* starField1.sks in Resources */,
 				C90EAD091BA548480056DBF1 /* Cubellan Bold.ttf in Resources */,
-				C975ADD21B6737E100219585 /* bg_front_spacedust.png in Resources */,
 				C975ADB71B67378700219585 /* asteroid3.2.png in Resources */,
 				C975ADC71B67378700219585 /* explosion10.png in Resources */,
 				C975ADB81B67378700219585 /* asteroid3.3.png in Resources */,
 				C975ADC51B67378700219585 /* explosion8.png in Resources */,
-				C975ADD31B6737E100219585 /* bg_galaxy.png in Resources */,
 				C975ADC81B67378700219585 /* explosion11.png in Resources */,
-				C975ADD61B6737E100219585 /* bg_spacialanomaly2.png in Resources */,
 				C975ADBD1B67378700219585 /* asteroid4.4.png in Resources */,
 				C975ADAE1B67378700219585 /* asteroid1.1.png in Resources */,
 				C975ADB51B67378700219585 /* asteroid2.4.png in Resources */,
@@ -378,11 +358,10 @@
 				C972FC391B672E5E00871057 /* Images.xcassets in Resources */,
 				C975ADBC1B67378700219585 /* asteroid4.3.png in Resources */,
 				C9EF659B1B840F2400DD5D38 /* starField2.sks in Resources */,
-				C975ADD51B6737E100219585 /* bg_spacialanomaly.png in Resources */,
 				C90EAD0A1BA5484B0056DBF1 /* Cubellan Italic.ttf in Resources */,
+				C992D8621BABC89A003F5753 /* Starhubble.jpg in Resources */,
 				C975ADBF1B67378700219585 /* explosion2.png in Resources */,
 				C975ADB41B67378700219585 /* asteroid2.3.png in Resources */,
-				C975ADD41B6737E100219585 /* bg_planetsunrise.png in Resources */,
 				C9EF659D1B840F3F00DD5D38 /* starField3.sks in Resources */,
 				C975ADC21B67378700219585 /* explosion5.png in Resources */,
 				C975ADB11B67378700219585 /* asteroid1.4.png in Resources */,
@@ -393,9 +372,9 @@
 				C9C4380E1B8578E200DB5729 /* startGameView.png in Resources */,
 				C975ADB31B67378700219585 /* asteroid2.2.png in Resources */,
 				C975ADBB1B67378700219585 /* asteroid4.2.png in Resources */,
+				C992D8611BABC89A003F5753 /* space.jpg in Resources */,
 				C975ADAF1B67378700219585 /* asteroid1.2.png in Resources */,
 				C9DBAB141B781DE200C1DA73 /* Sound in Resources */,
-				C972FC371B672E5E00871057 /* Main.storyboard in Resources */,
 				C975ADE01B67397800219585 /* intel.png in Resources */,
 				C9C4380D1B8578E200DB5729 /* destroyedView.png in Resources */,
 				C975ADC01B67378700219585 /* explosion3.png in Resources */,
@@ -411,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C96BC01A1B88327E0001429E /* DestroyedView.m in Sources */,
 				C975AD8D1B67306800219585 /* Asteroid.m in Sources */,
 				C98373F81B6DE8760077B9CA /* Spaceship.m in Sources */,
 				C975AD841B67305600219585 /* Math.m in Sources */,
@@ -429,14 +407,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C972FC351B672E5E00871057 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C972FC361B672E5E00871057 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C972FC3A1B672E5E00871057 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

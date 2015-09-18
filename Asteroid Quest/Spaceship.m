@@ -9,8 +9,7 @@
 #import "Spaceship.h"
 #import "Bitmasks.h"
 #import "SoundManager.h"
-
-
+#import "Constants.h"
 
 @implementation Spaceship
 
@@ -23,7 +22,7 @@
         
         self = [Spaceship spriteNodeWithTexture:spaceshipTexture];
         
-        [self setScale:0.05];
+        [self setScale:IMAGE_SCALE];
     
     }
     return self;
@@ -31,11 +30,11 @@
 
 -(void) startPlaying
 {
-    self.physicsBody = [SKPhysicsBody bodyWithTexture:self.texture size:self.size];
+    self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.size.width / 2];
     self.physicsBody.dynamic = YES;
     self.physicsBody.categoryBitMask = spaceshipBitMask;
     self.physicsBody.contactTestBitMask = asteroidBitMask;
-    self.physicsBody.collisionBitMask = 0;
+    self.physicsBody.collisionBitMask = COLLISION_BITMASK_ZERO;
     self.physicsBody.usesPreciseCollisionDetection = YES;
 }
 

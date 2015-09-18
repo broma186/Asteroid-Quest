@@ -9,6 +9,7 @@
 #import "Asteroid.h"
 #import "Math.h"
 #import "Bitmasks.h"
+#import "Constants.h"
 
 @implementation Asteroid
 
@@ -38,15 +39,15 @@
             self.physicsBody.dynamic = YES;
             self.physicsBody.categoryBitMask = asteroidBitMask;
             self.physicsBody.contactTestBitMask = spaceshipBitMask | missileBitMask;
-            self.physicsBody.collisionBitMask = 0;
+            self.physicsBody.collisionBitMask = COLLISION_BITMASK_ZERO;
             self.physicsBody.usesPreciseCollisionDetection = YES;
             
             
-            SKAction *move= [SKAction moveByX:0 y:-800 duration:5.0];
-            move.speed = [math randFloatValBetweenMin:0.5 Max:3];
+            SKAction *move= [SKAction moveByX:ASTEROID_MOVE_X y:ASTEROID_MOVE_Y duration:5.0];
+            move.speed = [math randFloatValBetweenMin:ASTEROID_MIN_MOVE_SPEED Max:ASTEROID_MAX_MOVE_SPEED];
             
             SKAction *rotate = [SKAction repeatActionForever:[SKAction animateWithTextures:@[ast1Texture1, ast1Texture2,
-                                                               ast1Texture3, ast1Texture4] timePerFrame:0.05]];
+                                                                                             ast1Texture3, ast1Texture4] timePerFrame:TIME_BETWEEN_SPIN_FRAME1]];
             
             SKAction *group = [SKAction group:@[rotate, move]];
             [self runAction:group withKey:@"group"];
@@ -75,14 +76,14 @@
             self.physicsBody.dynamic = YES;
             self.physicsBody.categoryBitMask = asteroidBitMask;
             self.physicsBody.contactTestBitMask = spaceshipBitMask | missileBitMask;
-            self.physicsBody.collisionBitMask = 0;
+            self.physicsBody.collisionBitMask = COLLISION_BITMASK_ZERO;
             self.physicsBody.usesPreciseCollisionDetection = YES;
             
-            SKAction *move= [SKAction moveByX:0 y:-800 duration:5.0];
-            move.speed = [math randFloatValBetweenMin:0.5 Max:3];
+            SKAction *move= [SKAction moveByX:ASTEROID_MOVE_X y:ASTEROID_MOVE_Y duration:5.0];
+            move.speed = [math randFloatValBetweenMin:ASTEROID_MIN_MOVE_SPEED Max:ASTEROID_MAX_MOVE_SPEED];
             
             SKAction *rotate = [SKAction repeatActionForever:[SKAction animateWithTextures:@[ast2Texture1, ast2Texture2,
-                                                                                             ast2Texture3, ast2Texture4] timePerFrame:0.1]];
+                                                                                             ast2Texture3, ast2Texture4] timePerFrame:TIME_BETWEEN_SPIN_FRAME2]];
             
             SKAction *group = [SKAction group:@[rotate, move]];
             [self runAction:group withKey:@"group"];
@@ -110,14 +111,14 @@
             self.physicsBody.dynamic = YES;
             self.physicsBody.categoryBitMask = asteroidBitMask;
             self.physicsBody.contactTestBitMask = spaceshipBitMask | missileBitMask;
-            self.physicsBody.collisionBitMask = 0;
+            self.physicsBody.collisionBitMask = COLLISION_BITMASK_ZERO;
             self.physicsBody.usesPreciseCollisionDetection = YES;
             
-            SKAction *move= [SKAction moveByX:0 y:-800 duration:5.0];
-            move.speed = [math randFloatValBetweenMin:0.5 Max:3];
+            SKAction *move= [SKAction moveByX:ASTEROID_MOVE_X y:ASTEROID_MOVE_Y duration:5.0];
+            move.speed = [math randFloatValBetweenMin:ASTEROID_MIN_MOVE_SPEED Max:ASTEROID_MAX_MOVE_SPEED];
             
             SKAction *rotate = [SKAction repeatActionForever:[SKAction animateWithTextures:@[ast3Texture1, ast3Texture2,
-                                                                                             ast3Texture3, ast3Texture4] timePerFrame:0.03]];
+                                                                                             ast3Texture3, ast3Texture4] timePerFrame:TIME_BETWEEN_SPIN_FRAME3]];
             
             
             SKAction *group = [SKAction group:@[rotate, move]];
@@ -147,14 +148,14 @@
             self.physicsBody.dynamic = YES;
             self.physicsBody.categoryBitMask = asteroidBitMask;
             self.physicsBody.contactTestBitMask = spaceshipBitMask;
-            self.physicsBody.collisionBitMask = 0;
+            self.physicsBody.collisionBitMask = COLLISION_BITMASK_ZERO;
             self.physicsBody.usesPreciseCollisionDetection = YES;
             
-            SKAction *move= [SKAction moveByX:0 y:-800 duration:5.0];
-            move.speed = [math randFloatValBetweenMin:0.5 Max:3];
+            SKAction *move= [SKAction moveByX:ASTEROID_MOVE_X y:ASTEROID_MOVE_Y duration:5.0];
+            move.speed = [math randFloatValBetweenMin:ASTEROID_MIN_MOVE_SPEED Max:ASTEROID_MAX_MOVE_SPEED];
             
             SKAction *rotate = [SKAction repeatActionForever:[SKAction animateWithTextures:@[ast4Texture1, ast4Texture2,
-                                                                                             ast4Texture3, ast4Texture4] timePerFrame:0.04]];
+                                                                                             ast4Texture3, ast4Texture4] timePerFrame:TIME_BETWEEN_SPIN_FRAME4]];
             
             SKAction *group = [SKAction group:@[rotate, move]];
             [self runAction:group withKey:@"group"];
