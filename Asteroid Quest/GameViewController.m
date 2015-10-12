@@ -141,7 +141,6 @@
 - (void) spaceshipDestroyed
 {
     // Fade out sound
-    
     [_spaceshipSound fadeOut:1.0];
     
     [UIView animateWithDuration:.9 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{

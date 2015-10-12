@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Cubellan Bold.ttf">
@@ -16,51 +15,36 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view alpha="0.0" contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mv7-eA-pFx">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="space.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mv7-eA-pFx">
                     <rect key="frame" x="-13" y="-14" width="506" height="508"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asteroid Quest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGP-GZ-Wnz">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Asteroid Quest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGP-GZ-Wnz">
                     <rect key="frame" x="61" y="38" width="359" height="90"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="90" id="DNl-hN-Vzp"/>
-                    </constraints>
                     <fontDescription key="fontDescription" name="CubellanBd" family="Cubellan" pointSize="45"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  Copyright (c) 2015 Matthew Brooker. All rights reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mqn-3r-eiD">
-                    <rect key="frame" x="14" y="451" width="453" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="  Copyright (c) 2015 Matthew Brooker. All rights reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USL-RM-7FL">
+                    <rect key="frame" x="14" y="443" width="453" height="21"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="FS0-fl-geM"/>
-                        <constraint firstAttribute="height" constant="21" id="qzg-6V-5RJ"/>
+                        <constraint firstAttribute="height" constant="21" id="VLK-Gm-8PL"/>
+                        <constraint firstAttribute="height" constant="21" id="zVz-Vv-w7F"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="Cubellan" family="Cubellan" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                     <variation key="default">
                         <mask key="constraints">
-                            <exclude reference="qzg-6V-5RJ"/>
+                            <exclude reference="VLK-Gm-8PL"/>
                         </mask>
                     </variation>
                 </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-            <constraints>
-                <constraint firstItem="mv7-eA-pFx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="FXT-v6-QhT"/>
-                <constraint firstItem="mqn-3r-eiD" firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottomMargin" id="OR8-Cd-L1T"/>
-                <constraint firstItem="mv7-eA-pFx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="-14" id="QW8-YA-0Gz"/>
-                <constraint firstItem="mqn-3r-eiD" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Vn2-Jr-pq1"/>
-                <constraint firstItem="mqn-3r-eiD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="YeL-h1-8GH"/>
-                <constraint firstItem="mv7-eA-pFx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="-13" id="ZNG-NU-Y3A"/>
-                <constraint firstItem="LGP-GZ-Wnz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="38" id="b1F-EC-lQk"/>
-                <constraint firstItem="LGP-GZ-Wnz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="61" id="l7N-Y6-wyB"/>
-                <constraint firstItem="mv7-eA-pFx" firstAttribute="centerX" secondItem="LGP-GZ-Wnz" secondAttribute="centerX" id="swN-Em-yqu"/>
-                <constraint firstItem="mqn-3r-eiD" firstAttribute="centerX" secondItem="LGP-GZ-Wnz" secondAttribute="centerX" id="zGs-jC-Lhe"/>
-            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="548" y="455"/>

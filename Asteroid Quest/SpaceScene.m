@@ -182,7 +182,7 @@ static bool destroyed = NO;
     // Position missile at end of spaceship gun
     missile.position = CGPointMake(spaceship.position.x, spaceship.position.y + 20);
     
-    CGSize missileBodySize = CGSizeMake(3, 10);
+    CGSize missileBodySize = CGSizeMake(MISSILE_BODY_SIZE_X, MISSILE_BODY_SIZE_Y);
     
     missile.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:missileBodySize];
     missile.physicsBody.dynamic = YES;
